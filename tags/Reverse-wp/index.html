@@ -10,7 +10,7 @@
   
   <title>
     
-      Tags | GENIA
+      GENIA
     
   </title>
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -192,42 +192,40 @@
 </header>
 
     <div id="article-banner">
-  <h2>Tags</h2>
-  <p class="post-date">Tag Retrieval</p>
+  <h2>Archives</h2>
+  <p class="post-date">Archives</p>
 </div>
-<main class="app-body">
-  <div id="tag-cloud">
+<main class="app-body" id="archives">
+  
+  
+  
+    <section class="time-section">
+  <h1 class="section-year">
+    2022
+  </h1>
+  <div class="section-list">
     
-      <a class="tag1" data-name="tag-Reverse wp">Reverse wp</a>
+    
+      <div class="section-list-item">
+        <a href="/2022/12/17/%5BGWCTF%202019%5Dpyre/" class="archive-title">[GWCTF 2019]pyre</a>
+        <p class="archive-date">12-17</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2022/12/17/hello-world/" class="archive-title">Hello World</a>
+        <p class="archive-date">12-17</p>
+      </div>
     
   </div>
+</section>
   
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-Reverse wp">Reverse wp</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/2022/12/17/[GWCTF 2019]pyre/">[GWCTF 2019]pyre</a>
-          </li>
-        </ul>
-        
-    </div>
-    
 </main>
 
 <script>
   (function () {
-    var url = 'http://example.com/tags/index.html'
-    $('#article-banner').geopattern(url)
-    $('.header').removeClass('fixed-header')
-
-    var tag = location.hash.replace('#', '')
-    if (tag) {
-      var tagId = "#tag-" + tag;
-      $("html, body").animate({
-        scrollTop: $(tagId).offset().top 
-      }, 400)
-    }
+    var url = 'http://example.com/tags/Reverse-wp/index.html';
+    $('#article-banner').geopattern(url);
+    $('.header').removeClass('fixed-header');
   })();
 </script>
     <div class="scroll-top">
