@@ -82,12 +82,6 @@
       
         <li class="list-item">
           
-            <a href="/series/" class="item-link">Series</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
             <a href="/tags/" class="item-link">Tags</a>
           
         </li>
@@ -95,12 +89,6 @@
         <li class="list-item">
           
             <a href="/archives/" class="item-link">Archives</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/project/" class="item-link">Projects</a>
           
         </li>
       
@@ -134,12 +122,6 @@
         
           <li class="menu-item">
             
-              <a href="/series/" class="menu-link">Series</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
               <a href="/tags/" class="menu-link">Tags</a>
             
           </li>
@@ -147,12 +129,6 @@
           <li class="menu-item">
             
               <a href="/archives/" class="menu-link">Archives</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/project/" class="menu-link">Projects</a>
             
           </li>
         
@@ -208,7 +184,7 @@
         Accept: 'application/vnd.github.v3.raw'
       },
       type: 'get',
-      url: 'https://api.github.com/users/yanm1ng/repos',
+      url: 'https://api.github.com/users/GENIAchen/repos',
       success: function (data) {
         var repos = data.sort(function(a, b) {
           return (b.stargazers_count - a.stargazers_count)
