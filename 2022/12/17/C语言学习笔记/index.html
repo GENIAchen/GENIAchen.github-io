@@ -265,7 +265,7 @@
 <h3 id="4-1-2-while和do-while循环"><a href="#4-1-2-while和do-while循环" class="headerlink" title="4.1.2 while和do-while循环"></a>4.1.2 while和do-while循环</h3><p>do-while循环：进入循环时不做检查，而是在执行完一轮循环体的代码之后，再来检查循环的条件是否满足，满足则进入下一轮循环，不满足则结束循环。</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">    &lt;循环语句&gt;          <span class="comment">//无论是否满足条件，循环都至少执行一遍</span></span><br><span class="line">&#125;<span class="keyword">while</span>(&lt;循环条件&gt;);</span><br></pre></td></tr></table></figure>
 
-<p><strong>对于while循环：寻欢体内要有改变条件的机会，否则会陷入死循环。</strong></p>
+<p><strong>对于while循环：循环体内要有改变条件的机会，否则会陷入死循环。</strong></p>
 <p>程序的验证：常用数据边界，如有效范围两端的数，特殊的倍数等</p>
 <p>0、负数、10、个位数等等</p>
 <p>可以在程序适当的地方插入<code>printf()</code>检查输出。</p>
