@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="When there is a will, there is a way.">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      crackMe | GENIA
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+  
+  
+    
+<script src="/js/local-search.js"></script>
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>GENIA</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+      
+        <li class="menu-item menu-item-search right-list">
+    <a role="button" class="popup-trigger">
+        <i class="fa fa-search fa-fw"></i>
+    </a>
+</li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+    
+      <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+            <span class="search-icon">
+                <i class="fa fa-search"></i>
+            </span>
+            <div class="search-input-container">
+                <input autocomplete="off" autocapitalize="off"
+                    placeholder="Please enter your keyword(s) to search." spellcheck="false"
+                    type="search" class="search-input">
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa fa-times-circle"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+    
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>crackMe</h2>
+  <p class="post-date">2023-05-24</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h1 id="crackMe"><a href="#crackMe" class="headerlink" title="crackMe"></a>crackMe</h1><p><a target="_blank" rel="noopener" href="https://www.exyb.cn/news/show-17161.html">BUUCTF crackMe 题解 (exyb.cn)</a></p>
+<p>无壳32位exe文件。</p>
+<p>题目提示对最后的结果进行一个MD5哈希。用户名已知为：welcomebeijing</p>
+<p>要求我们输入正确的password。</p>
+<img src="/2023/05/24/crackMe/main.jpg" class="">
+
+<p>查看sub_401090，发现传入的用户名并没有被修改，而是根据我们传入的用户名对byte_416050数组进行了修改。这个数组在后面的 sub_401830 中被再次修改。</p>
+<p>loc_4011A0 处，通过指针引用了一个函数，查看汇编发现无法F5，我们将标红处 nop 后重新定义函数，即可查看其伪C：</p>
+<img src="/2023/05/24/crackMe/tryagain.png" class="">
+
+<p>a1即 format 数组中存放着congratulations，a2 即 v4 数组中存放 try again。函数的返回值也就是赋给 v3 的值恒为 1。</p>
+<p>查看最重要的  sub_401830：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">bool</span> __cdecl <span class="title function_">sub_401830</span><span class="params">(<span class="type">int</span> a1, <span class="type">const</span> <span class="type">char</span> *a2)</span></span><br><span class="line">&#123;</span><br><span class="line"> <span class="comment">//......</span></span><br><span class="line"></span><br><span class="line">  v4 = <span class="number">0</span>;v5 = <span class="number">0</span>;v11 = <span class="number">0</span>;v10 = <span class="number">0</span>;v16 = <span class="number">0</span>;</span><br><span class="line">  <span class="built_in">memset</span>(v17, <span class="number">0</span>, <span class="keyword">sizeof</span>(v17));v14 = <span class="number">0</span>;</span><br><span class="line">  <span class="built_in">memset</span>(v15, <span class="number">0</span>, <span class="keyword">sizeof</span>(v15));</span><br><span class="line">  v9 = <span class="number">0</span>;v6 = <span class="number">0</span>;v3 = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> ( v6 &lt; <span class="built_in">strlen</span>(a2) )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">if</span> ( <span class="built_in">isdigit</span>(a2[v6]) )</span><br><span class="line">    &#123;</span><br><span class="line">      v8 = a2[v6] - <span class="number">48</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> ( <span class="built_in">isxdigit</span>(a2[v6]) )</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">if</span> ( *((_DWORD *)NtCurrentPeb()-&gt;SubSystemData + <span class="number">3</span>) != <span class="number">2</span> )<span class="comment">// 反调试*1</span></span><br><span class="line">        a2[v6] = <span class="number">34</span>;</span><br><span class="line">      v8 = (a2[v6] | <span class="number">0x20</span>) - <span class="number">87</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">      v8 = ((a2[v6] | <span class="number">0x20</span>) - <span class="number">97</span>) % <span class="number">6</span> + <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    __rdtsc();</span><br><span class="line">    __rdtsc();</span><br><span class="line">    v9 = v8 + <span class="number">16</span> * v9;</span><br><span class="line">    <span class="keyword">if</span> ( !((<span class="type">int</span>)(v6 + <span class="number">1</span>) % <span class="number">2</span>) )</span><br><span class="line">    &#123;</span><br><span class="line">      *(&amp;v14 + v3++) = v9;</span><br><span class="line">      v9 = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    ++v6;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">while</span> ( v5 &lt; <span class="number">8</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    v10 += byte_416050[++v11];</span><br><span class="line">    v12 = byte_416050[v11];</span><br><span class="line">    v7 = byte_416050[v10];</span><br><span class="line">    byte_416050[v10] = v12;</span><br><span class="line">    byte_416050[v11] = v7;</span><br><span class="line">    <span class="keyword">if</span> ( ((<span class="type">int</span>)NtCurrentPeb()-&gt;UnicodeCaseTableData &amp; <span class="number">0x70</span>) != <span class="number">0</span> )<span class="comment">// 反调试*2</span></span><br><span class="line">      v12 = v10 + v11;</span><br><span class="line">    *(&amp;v16 + v5) = byte_416050[(<span class="type">unsigned</span> __int8)(v7 + v12)] ^ *(&amp;v14 + v4);</span><br><span class="line">    <span class="keyword">if</span> ( (<span class="type">unsigned</span> __int8)*(_DWORD *)&amp;NtCurrentPeb()-&gt;BeingDebugged )<span class="comment">// 反调试*3</span></span><br><span class="line">    &#123;</span><br><span class="line">      v10 = <span class="number">-83</span>;</span><br><span class="line">      v11 = <span class="number">43</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    sub_401710(&amp;v16, a1, v5++);</span><br><span class="line">    v4 = v5;</span><br><span class="line">    <span class="keyword">if</span> ( v5 &gt;= (<span class="type">unsigned</span> <span class="type">int</span>)(&amp;v14 + <span class="built_in">strlen</span>(&amp;v14) + <span class="number">1</span> - v15) )</span><br><span class="line">      v4 = <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  v13 = <span class="number">0</span>;</span><br><span class="line">  sub_401470(&amp;v16, &amp;v13);</span><br><span class="line">  <span class="keyword">return</span> v13 == <span class="number">0xAB94</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>一直到 while 循环，一直是在对 byte_416050 的值进行处理。</p>
+<p>我们从下往上看，因为要打印出format数组中的内容，必须在 if 语句内就跳出 while 循环。因此 sub_401830 的最后 v13 需要等于 0xAB94。这就不得不看看 sub_401470 里是什么了：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">_DWORD *__usercall sub_401470@&lt;eax&gt;(<span class="type">int</span> a1@&lt;ebx&gt;, _BYTE *a2, _DWORD *a3)</span><br><span class="line">&#123;</span><br><span class="line">  _DWORD *_EAX; <span class="comment">// eax</span></span><br><span class="line">  <span class="type">char</span> v5; <span class="comment">// al</span></span><br><span class="line">  <span class="type">char</span> _AL; <span class="comment">// al</span></span><br><span class="line">  _DWORD *result; <span class="comment">// eax</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> ( *a2 != <span class="string">&#x27;d&#x27;</span> )</span><br><span class="line">    *a3 ^= <span class="number">3u</span>;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    *a3 |= <span class="number">4u</span>;</span><br><span class="line">  <span class="keyword">if</span> ( a2[<span class="number">1</span>] != <span class="string">&#x27;b&#x27;</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    *a3 &amp;= <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">    _EAX = (_DWORD *)*a3;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">  &#123;</span><br><span class="line">    _EAX = a3;</span><br><span class="line">    *a3 |= <span class="string">&#x27;\x14&#x27;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  __asm &#123; aam &#125;</span><br><span class="line">  <span class="keyword">if</span> ( a2[<span class="number">2</span>] != <span class="string">&#x27;a&#x27;</span> )</span><br><span class="line">    *a3 &amp;= <span class="number">0xA</span>u;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    *a3 |= <span class="number">0x84</span>u;</span><br><span class="line">  <span class="keyword">if</span> ( a2[<span class="number">3</span>] != <span class="string">&#x27;p&#x27;</span> )</span><br><span class="line">    *a3 &gt;&gt;= <span class="number">7</span>;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    *a3 |= <span class="number">0x114</span>u;</span><br><span class="line">  <span class="keyword">if</span> ( a2[<span class="number">4</span>] != <span class="string">&#x27;p&#x27;</span> )</span><br><span class="line">    *a3 *= <span class="number">2</span>;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    *a3 |= <span class="number">0x380</span>u;</span><br><span class="line">  <span class="keyword">if</span> ( *((_DWORD *)NtCurrentPeb()-&gt;SubSystemData + <span class="number">3</span>) != <span class="number">2</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">if</span> ( a2[<span class="number">5</span>] != <span class="string">&#x27;f&#x27;</span> )</span><br><span class="line">      *a3 |= <span class="number">0x21</span>u;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      *a3 |= <span class="number">0x2DC</span>u;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> ( a2[<span class="number">5</span>] != <span class="string">&#x27;s&#x27;</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    v5 = (<span class="type">char</span>)a3;</span><br><span class="line">    *a3 ^= <span class="number">0x1AD</span>u;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">  &#123;</span><br><span class="line">    *a3 |= <span class="number">0xA04</span>u;</span><br><span class="line">    v5 = (<span class="type">char</span>)a3;</span><br><span class="line">  &#125;</span><br><span class="line">  _AL = v5 - (~(a1 &gt;&gt; <span class="number">5</span>) - <span class="number">1</span>);</span><br><span class="line">  __asm &#123; daa &#125;</span><br><span class="line">  <span class="keyword">if</span> ( a2[<span class="number">6</span>] != <span class="string">&#x27;e&#x27;</span> )</span><br><span class="line">    *a3 |= <span class="number">0x4A</span>u;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    *a3 |= <span class="number">0x2310</span>u;</span><br><span class="line">  <span class="keyword">if</span> ( a2[<span class="number">7</span>] != <span class="string">&#x27;c&#x27;</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    *a3 &amp;= <span class="number">0x3A3</span>u;</span><br><span class="line">    result = (_DWORD *)*a3;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">  &#123;</span><br><span class="line">    result = a3;</span><br><span class="line">    *a3 |= <span class="number">0x8A10</span>u;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当 a2 满足所有 if 的条件后，经过一通或运算和与运算才能得到  0xAB94，而需要满足这些条件，a2 字符串必须等于：dbappsec ，注意中间有个反调试，所以索引 5 处应该是 s 。即函数外的 v16 为 dbappsec。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*(&amp;v16 + v5) = byte_416050[(<span class="type">unsigned</span> __int8)(v7 + v12)] ^ *(&amp;v14 + v4);</span><br></pre></td></tr></table></figure>
+
+<p>v16 是 byte_416050 与 v14 进行异或得到的结果。盲猜一手，v14 里存的就是我们输进去的密码。</p>
+<p>现在就相当于知道了 byte_416050 就知道了密码。</p>
+<p>byte_416050 通过 x32dbg 动调得到。</p>
+<p>动调得到它的过程非常精彩，花了我一个晚上的时间（</p>
+<p>这个 sub_401830 里有三个反调试，我们需要在 IDA 里找到它们的地址。</p>
+<p>我一开始尝试在伪 C 界面打断点然后动调，发现根本没法同步到汇编界面，跳来跳去一下子就乱了。只能在汇编界面先打好断点。对于没法看懂每句x86汇编的我来说无比痛苦。按照师傅给的 tip，先在汇编的可疑语句上打个断点（比如这道题的 jz 条件跳转），然后 F5 ，在 伪C 界面初始深色的一行就对应汇编断点。</p>
+<p>于是我迅速地给三个反调试都打上了断点（得意bushi</p>
+<p>接着找到异或加密所在语句（在第二个和第三个反调试之间）：</p>
+<img src="/2023/05/24/crackMe/xor.png" class="">
+
+<p>可以判断出 待求数组的每一位都会临时存放在 ecx 寄存器内。</p>
+<p>把可执行文件扔进 x32dbg ，开始动调大法，每循环一次通过提取出ecx的值得到数组中的一个元素，直到程序输出 Try again。</p>
+<p>x32 里地址后四位是和 IDA 对应的，直接按 IDA 的地址找就行，试了一下直接搜索用户模块命令也完全可行。</p>
+<p>byte_416050 &#x3D; [0x2A ,0xD7,0x92,0xE9,0x53,0xE2,0xC4,0xCD]</p>
+<p>写脚本：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">key = [<span class="number">0x2A</span>,<span class="number">0xD7</span>,<span class="number">0x92</span>,<span class="number">0xE9</span>,<span class="number">0x53</span>,<span class="number">0xE2</span>,<span class="number">0xC4</span>,<span class="number">0xCD</span>]</span><br><span class="line">outcome = <span class="string">&quot;dbappsec&quot;</span></span><br><span class="line">outcome_list=[]</span><br><span class="line">word = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> outcome:</span><br><span class="line">	outcome_list.append(<span class="built_in">ord</span>(i))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">8</span>):</span><br><span class="line">	word.append(key[i]^outcome_list[i])</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> word:</span><br><span class="line">	<span class="built_in">print</span>(<span class="built_in">hex</span>(i),end=<span class="string">&quot; &quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#得到输出：0x4e 0xb5 0xf3 0x99 0x23 0x91 0xa1 0xae</span></span><br></pre></td></tr></table></figure>
+
+<p>整理一下：4eb5f3992391a1ae</p>
+<p>按照题目要求进行一次 MD5 加密：</p>
+<p>得到 flag{d2be2981b84f2a905669995873d6a36c}</p>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#Reverse wp" >
+    <span class="tag-code">Reverse wp</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2023/02/20/JS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+        <span class="nav-arrow">← </span>
+        
+          JS语言学习
+        
+      </a>
+    
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+    <!-- 二维码 END -->
+    
+      <!-- Utterances START -->
+      <div id="utterances"></div>
+      <script src="https://utteranc.es/client.js"
+        repo=""
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async></script>    
+      <!-- Utterances END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#crackMe"><span class="toc-nav-text">crackMe</span></a></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://example.com/2023/05/24/crackMe/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', '/css/images/error_icon.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== '/css/images/error_icon.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
+
+
+
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2023 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
+    
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      hljs.configure({useBR: true});
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+
+<script src="/js/script.js"></script>
+
+
+  </body>
+</html>
