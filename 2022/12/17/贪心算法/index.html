@@ -10,7 +10,7 @@
   
   <title>
     
-      贪心算法学习 | GENIA
+      贪心算法 | GENIA
     
   </title>
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -164,7 +164,7 @@
 </header>
 
     <div id="article-banner">
-  <h2>贪心算法学习</h2>
+  <h2>贪心算法</h2>
   <p class="post-date">2022-12-17</p>
   <div class="arrow-down">
     <a href="javascript:;"></a>
@@ -198,7 +198,7 @@
 <p>动态规划通过对问题进行分析，找出其最优子结构，并通过记忆化搜索来避免重复计算，从而得到问题的最优解。</p>
 <p>基本思想：将问题分解成若干个子问题，然后按照拓扑关系依次求解这些子问题，最后将子问题的解合并起来。</p>
 <h2 id="2-数字三角形"><a href="#2-数字三角形" class="headerlink" title="2.数字三角形"></a>2.数字三角形</h2><p><strong>题目标签：动态规划  2020  省赛</strong></p>
-<img src="/2022/12/17/12-17%E5%A4%87%E8%B5%9B%E6%97%A5%E5%BF%97/%E6%95%B0%E5%AD%97%E4%B8%89%E8%A7%92%E5%BD%A2%E9%A2%98%E7%9B%AE.jpg" class="">
+<img src="/2022/12/17/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E6%95%B0%E5%AD%97%E4%B8%89%E8%A7%92%E5%BD%A2%E9%A2%98%E7%9B%AE.jpg" class="">
 
 <p>按照标签这道题确实应该用动态规划来做，但是题目放水了，实际上用贪心就可以解决。</p>
 <p>根据 “此外，向左下走的次数与向右下走的次数相差不能超过 1。” 这个条件，可以对题目做一些简化。</p>
@@ -207,20 +207,19 @@
 <p>将不可能走到的数置为一个非常小的数，从倒数第二行的第一个数开始遍历，每次加上下面两个数之间的较大值，层层累加，即可得到最长路径。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">list0=[]</span><br><span class="line">N=<span class="built_in">eval</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="comment">#将输入的数据存放在一个二维列表中，一个行为一个元素</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N):</span><br><span class="line">        nums=<span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>,<span class="built_in">input</span>().split()))</span><br><span class="line">        list0.append(nums)</span><br><span class="line"><span class="comment">#将走不到的位置置成极小值</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N//<span class="number">2</span>+<span class="number">1</span>,N):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,i-N//<span class="number">2</span>):</span><br><span class="line">                list0[i][j]=-<span class="number">100</span></span><br><span class="line">                list0[i][-j-<span class="number">1</span>]=-<span class="number">100</span></span><br><span class="line"><span class="comment">#回溯相加</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N-<span class="number">2</span>,-<span class="number">1</span>,-<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,i+<span class="number">1</span>):</span><br><span class="line">                list0[i][j]+=<span class="built_in">max</span>(list0[i+<span class="number">1</span>][j],list0[i+<span class="number">1</span>][j+<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(list0[<span class="number">0</span>][<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
 
-<p>我尝试了奇数和偶数的案例，本地运行都没有问题，但是在蓝桥杯的测试平台上却发生了奇怪的错误：</p>
-<img src="/2022/12/17/12-17%E5%A4%87%E8%B5%9B%E6%97%A5%E5%BF%97/%E6%AE%B5%E9%94%99%E8%AF%AF.jpg" class="">
+<p>我尝试了奇数和偶数的案例，本地运行都没有问题，测试平台上却发生了奇怪的错误：</p>
+<img src="/2022/12/17/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/%E6%AE%B5%E9%94%99%E8%AF%AF.jpg" class="">
 
 <p><strong>去掉split()方法中的参数</strong>就不再发生段错误了，具体是什么原因？</p>
 <p>有一个注意点：碰到这一类问题，不能局限于题目给的测试样例进行推算，确定循环的范围。这道题一开始提交的时候只能通过两个测试案例，就是因为我想当然的将<code>range(0,i-N//2)</code>写成了<code>range(0,i-2)</code>。</p>
-<p>卡了很久才想到是范围判定错了的原因。之后务必不要再犯。</p>
 </section>
     <!-- Tags START -->
     
       <div class="tags">
         <span>Tags:</span>
         
-  <a href="/tags#算法学习" >
-    <span class="tag-code">算法学习</span>
+  <a href="/tags#算法" >
+    <span class="tag-code">算法</span>
   </a>
 
       </div>
@@ -231,17 +230,10 @@
   <div class="nav-container">
     <!-- reverse left and right to put prev and next in a more logic postition -->
     
-      <a class="nav-left" href="/2022/12/17/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-        <span class="nav-arrow">← </span>
-        
-          C语言学习笔记
-        
-      </a>
     
-    
-      <a class="nav-right" href="/2022/12/18/12-18%E5%A4%87%E8%B5%9B%E6%97%A5%E5%BF%97/">
+      <a class="nav-right" href="/2022/12/18/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">
         
-          背包问题
+          dp基础：背包问题
         
         <span class="nav-arrow"> →</span>
       </a>
@@ -284,7 +276,7 @@
 
 <script>
   (function () {
-    var url = 'http://example.com/2022/12/17/12-17备赛日志/';
+    var url = 'http://example.com/2022/12/17/贪心算法/';
     var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
