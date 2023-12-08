@@ -604,7 +604,7 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%100c&quot;</span>,<span class="string">&#x27;a&#x27;</span>);</span><br></pre></td></tr></table></figure>
 
 <p>会输出大量空格：</p>
-<img src="/2023/12/08/Pwn-f%60%14%EF%BF%BD/%25c.png" class="">
+<img src="/2023/12/08/Pwn-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/c.png" class="">
 
 <p>如果这里没有后面的 ‘a’，依旧可以输出大量空格。</p>
 <p>与 %c 同样效果的还有 %d 和 %s。</p>
@@ -613,7 +613,7 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> a = <span class="number">0x12345678</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;the value of a:&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>,a);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;the address of a:&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%p\n&quot;</span>,&amp;a);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>输出：</p>
-<img src="/2023/12/08/Pwn-f%60%14%EF%BF%BD/%25p.png" class="">
+<img src="/2023/12/08/Pwn-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/p.png" class="">
 
 <p>可以分别将 a 以地址的形式输出 、输出 a 的地址。</p>
 <p>我们常用 <code>%n$p</code> 来泄露栈上的数据，<code>%n$x</code> 也可以。</p>
@@ -623,7 +623,7 @@
 
 <p>如果不断地输入 %s 程序肯定会崩溃，因为有的数据无法被解析为正常的地址。</p>
 <p>输入aaaa，可以通过动调得出输入字符与格式化字符串的偏移，这里是 6：</p>
-<img src="/2023/12/08/Pwn-f%60%14%EF%BF%BD/%25s.png" class="">
+<img src="/2023/12/08/Pwn-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/s.png" class="">
 
 <p>pwndbg 自带的 fmtarg 指令可以直接计算出偏移量：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">pwndbg&gt; </span><span class="language-bash">fmtarg 0xffffd088</span></span><br><span class="line">The index of format argument : 7 (&quot;\%6$p&quot;)</span><br></pre></td></tr></table></figure>
@@ -635,7 +635,7 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> a;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%100c%n\n&quot;</span>,a,&amp;a);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,a);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>输出：</p>
-<img src="/2023/12/08/Pwn-f%60%14%EF%BF%BD/%25n.png" class="">
+<img src="/2023/12/08/Pwn-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/n.png" class="">
 
 <p>可以将 100 写入变量 a 中。而 <code>%n</code> 结合 <code>n$</code>，以 <code>%Xc%Y$n</code> 这样的格式，可以将已经输入的字符数向指定的参数中写入，达成向任意地址写数据。%n 写入 4 字节，%hn 写入 2 字节，%hhn 写入 1 字节。</p>
 <h4 id="a"><a href="#a" class="headerlink" title="%a"></a>%a</h4><p>以 double 型的 16 进制格式输出栈中的变量，当程序开启了 FORTIFY 机制后，printf 在编译时被 __printf_chk 函数替换。相比于 printf ，多了一些限制：1. 不能使用 <code>%n$p</code>不连续地打印，比如说如果要使用  <code>%3$p</code>，则需要同时使用  <code>%1$p</code>和 <code>%2$p</code>   2. 在使用 n% 的时候会做一些检查</p>
@@ -1005,6 +1005,13 @@
         
       </a>
     
+    
+      <a class="nav-right" href="/2023/12/08/linux-%E5%9F%BA%E7%A1%80%E5%AE%9E%E9%AA%8C/">
+        
+          linux 基础实验
+        
+        <span class="nav-arrow"> →</span>
+      </a>
     
   </div>
 

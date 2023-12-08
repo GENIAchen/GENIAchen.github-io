@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="When there is a will, there is a way.">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      固件基础 | GENIA
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+  
+  
+    
+<script src="/js/local-search.js"></script>
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>GENIA</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+      
+        <li class="menu-item menu-item-search right-list">
+    <a role="button" class="popup-trigger">
+        <i class="fa fa-search fa-fw"></i>
+    </a>
+</li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+    
+      <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+            <span class="search-icon">
+                <i class="fa fa-search"></i>
+            </span>
+            <div class="search-input-container">
+                <input autocomplete="off" autocapitalize="off"
+                    placeholder="Please enter your keyword(s) to search." spellcheck="false"
+                    type="search" class="search-input">
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa fa-times-circle"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+    
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>固件基础</h2>
+  <p class="post-date">2023-12-08</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h2 id="固件是什么东西？"><a href="#固件是什么东西？" class="headerlink" title="固件是什么东西？"></a>固件是什么东西？</h2><p>是一种嵌入在硬件设备中的软件。通常它是位于 特殊应用集成电路（ASIC）或可编程逻辑器件（PLD）之中的 闪存 或 EEPROM 或 PROM （都属于只读存储器）里，有的可以让用户更新。</p>
+<p>固件位于软件和硬件的模糊地带，和软件一样，它可以被电脑执行。但是它又和一般软件不同，不存储在硬盘上，常常栖身于芯片。</p>
+<p>构成固件的代码会非常直接地与硬件沟通，而常规的软件要做到这一点则一般需要经过API操作系统还有设备驱动。其原因在于固件的作用就是连结着软硬件的底层且基础的纽带，也是控制系统硬件的方式。</p>
+<p>一个耳熟能详的例子就是PC内部的 UEFI 和 BIOS。</p>
+<blockquote>
+<p>固件对于这些底层的联动非常重要，所以它有时候也需要升级才能提供特定的功能或者修复bug。以 BIOS 为例，升级主板的 BIOS 可以提高主板的兼容性。我电脑的蓝牙驱动总是莫名奇妙掉掉，升级了 BIOS 之后就不再出现这样的问题了。</p>
+</blockquote>
+<p>固件通常没有加密什么的，开发者大都专注于提高操作系统和应用程序的安全性，而不是固件，这也使得固件成了黑客和间谍的目标。</p>
+<p>这主要是因为被黑的固件在格式化硬盘之后，即使会留存下来，也很难检测，而且由于固件直接控制硬件，固件被黑甚至会导致硬件损坏。</p>
+<h2 id="固件获取办法"><a href="#固件获取办法" class="headerlink" title="固件获取办法"></a>固件获取办法</h2><h3 id="从官网获取"><a href="#从官网获取" class="headerlink" title="从官网获取"></a>从官网获取</h3><p>见各厂商官网</p>
+<h3 id="通过流量拦截获取"><a href="#通过流量拦截获取" class="headerlink" title="通过流量拦截获取"></a>通过流量拦截获取</h3><p>如果设备厂商的官网不提供最新版的固件下载，就可以用此方法。在设备升级时，对设备或者控制设备的 APP 端进行流量代理转发，来实施中间人（MITM）攻击。</p>
+<p>需要用到的一些工具都集成在 Kali Linux上，看来得搞个 Kali 才行。</p>
+<p>没学过抓包，这块可能得先放一放。</p>
+<h3 id="使用编程器从闪存中读取"><a href="#使用编程器从闪存中读取" class="headerlink" title="使用编程器从闪存中读取"></a>使用编程器从闪存中读取</h3><h3 id="通过串口调试提取固件"><a href="#通过串口调试提取固件" class="headerlink" title="通过串口调试提取固件"></a>通过串口调试提取固件</h3><h2 id="固件分析"><a href="#固件分析" class="headerlink" title="固件分析"></a>固件分析</h2><p>固件分析的第一步就是把固件从芯片中提取出来。具体提取过程好像不是当前学习的重点。</p>
+<h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><h4 id="binwalk"><a href="#binwalk" class="headerlink" title="binwalk"></a>binwalk</h4><p>用于搜索给定二进制镜像文件以获取嵌入的文件和代码的工具。是一个固件分析工具，旨在对固件进行分析、提取及逆向工程。</p>
+<h3 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h3><p>通俗来说，文件系统是管理硬盘的软件系统。</p>
+<p>严格地说，文件系统是一套实现了数据的存储、分级组织、访问和获取等操作的抽象数据类型。</p>
+<h4 id="SquashFS"><a href="#SquashFS" class="headerlink" title="SquashFS"></a>SquashFS</h4><p>是一套供 linux 内核使用的只读压缩文件系统，它遵循 GPL 开源协议。适用于长时间开机且对稳定性要求更高的系统，为了降低成本，很多物联网设备都采用 SquashFS。</p>
+<p>使用 binwalk 对固件进行扫描可以获取相关信息，比如下面这个：</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/filesystem.png" class="">
+
+<h4 id="JFFS2"><a href="#JFFS2" class="headerlink" title="JFFS2"></a>JFFS2</h4><p>一种基于闪存存储介质的日志文件系统。同样是开源的。</p>
+<h4 id="YAFFS2"><a href="#YAFFS2" class="headerlink" title="YAFFS2"></a>YAFFS2</h4><p>是目前唯一一个专门为 NAND 闪存而设计的文件系统。它采用了类日志结构，并结合 NAND 闪存的特点，提供了掉电保护机制，可以有效地避免意外掉电对文件系统一致性和完整性的影响。</p>
+<p>YAFFS 使用独立的日志文件来跟踪文件系统内容的变化。</p>
+<h4 id="UBIFS"><a href="#UBIFS" class="headerlink" title="UBIFS"></a>UBIFS</h4><p>无序区块镜像文件系统 是 JFFS2 系统的一种替代。它是一个闪存文件系统，主要用在闪存设备中。</p>
+<h4 id="CramFS"><a href="#CramFS" class="headerlink" title="CramFS"></a>CramFS</h4><p>专门针对闪存设计的只读、压缩的文件系统。</p>
+<h3 id="提取固件中的文件系统"><a href="#提取固件中的文件系统" class="headerlink" title="提取固件中的文件系统"></a>提取固件中的文件系统</h3><p>固件分析的内容包括固件的文件系统、架构以及固件中存在的安全隐患。</p>
+<p>一般官网下载或者提取到的都是 .bin 文件，其中包含 Boot Loader、内核、文件系统以及其他内容。</p>
+<p>其中文件系统保存了需要重点研究的 Web 应用、协议、核心控制程序等，是我们的重点研究对象。</p>
+<h4 id="使用系统自带命令提取"><a href="#使用系统自带命令提取" class="headerlink" title="使用系统自带命令提取"></a>使用系统自带命令提取</h4><p>在提取之前首先得确认固件用的是哪种文件系统。</p>
+<p>可以将签名作为识别文件系统的特征。</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AD%BE%E5%90%8D.png" class="">
+
+<p>SquashFS 比较特殊，共有 6 个签名，设备厂商通常会对其进行自定义。</p>
+<p>上面表格中的内容不知道是否准确，我在网上查到的资料说其实 SquashFS 头部特征有 7 种，分别是：sqsh、hsqs、qshs、shsq、hsqt、tqsh、sqlz</p>
+<p>具体含义应该不用特别清楚。</p>
+<p>以 firmware.bin 为例，直接搜索是否含有头部信息即可：</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/%E7%B3%BB%E7%BB%9F%E6%8C%87%E4%BB%A4%E6%8F%90%E5%8F%96.png" class="">
+
+<p>在地址 0x00120200 处发现了 SquashFS 头部特征。</p>
+<p>使用 dd 命令将从 0x00120200 地址（注意必须是签名的起始地址）开始的内容提取出来，注意需要把地址转换为 10 进制。（1180160)</p>
+<p>命令格式为：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dd if=输入文件名 bs=读入/输出大小 skip=从文件头开始跳过块数 of=输出文件名</span><br></pre></td></tr></table></figure>
+
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/dd%E5%91%BD%E4%BB%A4.png" class="">
+
+<p>检查一下提取的文件系统：</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/%E6%A3%80%E6%9F%A5%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E6%8F%90%E5%8F%96.png" class="">
+
+<p>没问题。sqsh 具体对应的就是小端。</p>
+<p>最后一步执行 unsquashfs 命令，将文件系统完整地提取出来。</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/%E5%A4%B1%E8%B4%A5%E7%9A%84%E8%A7%A3%E5%8E%8B%E7%BC%A9.png" class="">
+
+<p>但是我这里失败了。先查看一下压缩方式：</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/%E6%9F%A5%E7%9C%8B%E5%8E%8B%E7%BC%A9%E6%96%B9%E5%BC%8F.png" class="">
+
+<p>确实用的是 lzma。那应该不是 unsquashfs 不支持的问题。</p>
+<p>使用 sasquatch 这个工具（<a target="_blank" rel="noopener" href="https://github.com/devttys0/sasquatch%EF%BC%89%E5%8F%AF%E4%BB%A5%E8%A7%A3%E5%8E%8B%EF%BC%9A">https://github.com/devttys0/sasquatch）可以解压：</a></p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/%E7%94%A8sasquatch%E8%BF%9B%E8%A1%8C%E8%A7%A3%E5%8E%8B.png" class="">
+
+<h4 id="使用工具提取"><a href="#使用工具提取" class="headerlink" title="使用工具提取"></a>使用工具提取</h4><p>上面的果然还是太麻烦了。直接 binwalk 一把梭最好了。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">查看固件详细信息（包括使用的文件系统种类）：</span><br><span class="line">binwalk xxx.bin   </span><br><span class="line">自动提取文件系统：</span><br><span class="line">binwalk -Me xxx.bin</span><br></pre></td></tr></table></figure>
+
+<h3 id="分析文件系统"><a href="#分析文件系统" class="headerlink" title="分析文件系统"></a>分析文件系统</h3><p>看上去物联网设备的文件系统和 linux 的文件系统很类似。</p>
+<h4 id="firmwalker"><a href="#firmwalker" class="headerlink" title="firmwalker"></a>firmwalker</h4><p><a target="_blank" rel="noopener" href="https://github.com/craigz28/firmwalker">https://github.com/craigz28/firmwalker</a></p>
+<p>就是一个简单的 bash 脚本。它的 data 目录下包含了与 firmwalker 匹配的敏感字符串的特征。也支持自定义添加想要搜索的字符串。</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/firmwalker%E4%BD%BF%E7%94%A8.png" class="">
+
+<p>进到firmwalker目录下，输入 <code>./firmwalker.sh +  文件系统目录</code> 即可。它会顺带把分析结果输出到 一个 txt 文件里便于查看。</p>
+<h4 id="trommel"><a href="#trommel" class="headerlink" title="trommel"></a>trommel</h4><p><a target="_blank" rel="noopener" href="https://github.com/CERTCC/trommel">https://github.com/CERTCC/trommel</a></p>
+<p>和 firmwalker 类似的辅助工具。</p>
+<p>命令语法为：</p>
+<p><code>trommel.py -p 文件系统目录  -o 输出结果的文件名 -d 输出结果目录</code></p>
+<p>试验一下，发现输出的内容相比 firmwalker 更多一些。</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/trommel%E8%AF%95%E8%BF%90%E8%A1%8C.png" class="">
+
+<p>除了包括 password、secret 等敏感词，还将 PHP 文件中 <code>$_GET</code>、<code>$_SERVER</code>、shell、system 等危险函数也列举出来。</p>
+<h4 id="emba"><a href="#emba" class="headerlink" title="emba"></a>emba</h4><p><a target="_blank" rel="noopener" href="https://github.com/e-m-b-a/emba">https://github.com/e-m-b-a/emba</a></p>
+<p>[EMBA安装、使用与源代码分析][<a target="_blank" rel="noopener" href="https://ylcao.top/2023/04/27/EMBA%E5%AE%89%E8%A3%85%E3%80%81%E4%BD%BF%E7%94%A8%E4%B8%8E%E6%BA%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90/]">https://ylcao.top/2023/04/27/EMBA%E5%AE%89%E8%A3%85%E3%80%81%E4%BD%BF%E7%94%A8%E4%B8%8E%E6%BA%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90/]</a></p>
+<p>一款功能更丰富的工具。是开源的固件扫描软件，可以对于已经提取出的基于 linux 的固件进行分析。还可以分析物联网设备的操作系统的内核。</p>
+<p>对于虚拟机配置的要求挺高的，具体可以看上面的文档。</p>
+<p>ubuntu18.04安装这个工具太痛苦了，装了很久很久都没装好，期间遇到了无数报错。或许用 kali 会好一点。</p>
+<p>总之就是太折磨了，比装 firmAE 折磨一百倍。如果不是非用它不可就别装了。</p>
+<p>第一个问题是：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">WARNING: The FIRMWARE variable is not set. Defaulting to a blank string.</span><br><span class="line">WARNING: The LOG variable is not set. Defaulting to a blank string.</span><br><span class="line">WARNING: The EMBA variable is not set. Defaulting to a blank string.</span><br><span class="line">ERROR: The Compose file &#x27;./docker-compose.yml&#x27; is invalid because:</span><br><span class="line">networks.emba_runs value Additional properties are not allowed (&#x27;name&#x27; was unexpected)</span><br></pre></td></tr></table></figure>
+
+<p>需要手动修改 docker-compose.yml 文件的一部分，把 name 属性给去掉：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">networks:</span></span><br><span class="line">  <span class="attr">emba_runs:</span></span><br><span class="line">    <span class="attr">driver:</span> <span class="string">bridge</span></span><br><span class="line">    <span class="attr">internal:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">driver_opts:</span></span><br><span class="line">      <span class="attr">com.docker.network.bridge.name:</span> <span class="string">emba_runs</span></span><br><span class="line">    <span class="attr">ipam:</span></span><br><span class="line">      <span class="attr">config:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">subnet:</span> <span class="string">&quot;172.36.0.0/16&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>第二个问题是 pip 源找不到需要版本的库，直接修改下载脚本，将需求版本改成清华源可以找得到的最高版本。</p>
+<p>第三个问题是 :</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">The following packages have unmet dependencies:</span><br><span class="line"> mongodb-org : Depends: mongodb-org-shell but it is not going to be installed</span><br><span class="line">               Depends: mongodb-org-server but it is not going to be installed</span><br><span class="line">               Depends: mongodb-org-mongos but it is not going to be installed</span><br><span class="line">E: Unable to correct problems, you have held broken packages.</span><br><span class="line">------------------------------------------------------------------------------------------------</span><br><span class="line">Error detected - status code 100</span><br><span class="line">Command:  apt-get install mongodb-org -y</span><br><span class="line">Location:  ./installer/IF20_cve_search.sh, line 148</span><br><span class="line">Stack Trace:</span><br><span class="line">    [1] IF20_cve_search(): ./installer/IF20_cve_search.sh, line 148 -&gt; IF20_cve_search</span><br><span class="line">    [2] main(): ./installer.sh, line 349 -&gt; main -d</span><br></pre></td></tr></table></figure>
+
+<p>解决步骤：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1.添加 MongoDB 软件源</span><br><span class="line">echo &quot;deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4 multiverse&quot; | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list</span><br><span class="line">2.导入 MongoDB GPG 公钥</span><br><span class="line">wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -</span><br><span class="line">3.更新软件包列表：</span><br><span class="line">sudo apt update</span><br><span class="line">4.安装</span><br><span class="line">sudo apt install mongodb-org -y</span><br></pre></td></tr></table></figure>
+
+<p>第四个问题就是下载 CVE-Search 的时候 git 用不了的问题，那也没什么办法，只能手动下载。</p>
+<p>每次重开的时候都要求删掉 external 文件夹，所以必须在脚本开始运行后再把下好的 cve-search 拖进去。试了下还是会显示 git 报错。看看脚本，大概在37行的位置：</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/%E5%AE%89%E8%A3%85emba.png" class="">
+
+<p>如果已经存在 cve-search 目录，它依旧会通过 git pull 检查是否是最新版本。把 git pull 注释掉，跳过这个检查。</p>
+<p>后面还会执行一次下载操作，因为没挂代理真的很慢很慢，只能挂着等。</p>
+<p>寄了，挂在那等着下载结果吃个饭回来发现虚拟机死机了。</p>
+<p>放弃了。先放着吧。</p>
+<h4 id="FACT"><a href="#FACT" class="headerlink" title="FACT"></a>FACT</h4><p><a target="_blank" rel="noopener" href="https://github.com/fkie-cad/FACT_core">https://github.com/fkie-cad/FACT_core</a></p>
+<p>一款拥有 Web 界面的自动化固件测试平台。可以以图形的形式展示分析结果。</p>
+<p>下好了，但是用不了，很崩溃。</p>
+<h3 id="固件模拟"><a href="#固件模拟" class="headerlink" title="固件模拟"></a>固件模拟</h3><p>在没有实体设备的情况下模拟实体设备的方式。</p>
+<h4 id="QEMU"><a href="#QEMU" class="headerlink" title="QEMU"></a>QEMU</h4><p>是一种通用的开源计算机仿真器和虚拟器。</p>
+<ul>
+<li>QEMU模拟器主要有两种比较常见的运作模式：User Mode（使用者模式）、System Mode（系统模式）。</li>
+<li>User Mode下，用户只需要将各种不同平台的处理编译得到的Linux程序放在QEMU虚拟中运行即可，其他的事情全部由QEMU虚拟机来完成，不需要用户自定义内核和虚拟磁盘等文件；</li>
+<li>System Mode下，最明显的特点是用户可以为QEMU虚拟机指定运行的内核或者虚拟硬盘等文件，简单来说系统模式下QEMU虚拟机是可根据用户的要求配置的。该模式下，QEMU 能模拟整个计算机系统，包括中央处理器和其它周边设备，还能再一部物理设备上虚拟多部不同的虚拟设备。</li>
+</ul>
+<p>安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install qemu qemu-user-static</span><br></pre></td></tr></table></figure>
+
+<p>qemu 除了能够模拟不同硬件架构下应用程序的运行环境外，也能以调试模式来启动待调试的程序，这样就可以借助 IDA 进行分析了。</p>
+<h4 id="Firmware-Analysis-Toolkit"><a href="#Firmware-Analysis-Toolkit" class="headerlink" title="Firmware Analysis Toolkit"></a>Firmware Analysis Toolkit</h4><h4 id="FrimAE"><a href="#FrimAE" class="headerlink" title="FrimAE"></a>FrimAE</h4><h3 id="固件加密方式"><a href="#固件加密方式" class="headerlink" title="固件加密方式"></a>固件加密方式</h3><p>大多数厂商为了保证固件的安全会对固件进行加密，使得提取文件系统变得困难。</p>
+<h4 id="情况-1"><a href="#情况-1" class="headerlink" title="情况 1"></a>情况 1</h4><p>设备出厂时未加密（v1.0），解密程序和未加密版本的固件（v1.1）一起提供，此后发布加密固件（v1.2）。我们可以获取 v1.1 ，从中获取到解密程序来解密 v1.2。然后进行更新。</p>
+<p>搞不懂为啥要这么干，直接厂商掌握解密程序不就好了，还非要泄露出来</p>
+<h4 id="情况-2"><a href="#情况-2" class="headerlink" title="情况 2"></a>情况 2</h4><p>设备固件的原始版本进行了加密，但是厂商决定更改加密方案，并发布一个未加密的新固件作为中间版本，其中包含了未来新版本的解密程序。通过这个中间版本的固件得到新版本的解密程序。</p>
+<h4 id="情况-3"><a href="#情况-3" class="headerlink" title="情况 3"></a>情况 3</h4><p>不管是初始版本还是中间版本还是最新版本都进行了加密。这个基本上除了硬件提取就没别的办法了。</p>
+<h4 id="一个解密实例"><a href="#一个解密实例" class="headerlink" title="一个解密实例"></a>一个解密实例</h4><p>D-Link DIR-822-US 系列的 3.15B02版本固件</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/D-Link%E5%9B%BA%E4%BB%B6%E8%A7%A3%E5%AF%86.png" class="">
+
+<p>就是它了！</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/%E5%9B%BA%E4%BB%B6%E8%A7%A3%E5%AF%862.png" class="">
+
+<p>解压后的文件夹包含 .bin 和 一个 release notes pdf。</p>
+<p>先用 binwalk 扫一下：</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/%E5%95%A5%E4%B9%9F%E6%89%AB%E4%B8%8D%E5%87%BA%E6%9D%A5.png" class="">
+
+<p>啥也扫不出来。</p>
+<p>执行 binwalk -E，查看固件熵值：</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/%E6%9F%A5%E7%9C%8B%E5%9B%BA%E4%BB%B6%E7%86%B5%E5%80%BC.png" class="">
+
+<blockquote>
+<p>熵值计算是一种确认给定的字节序列是否压缩或加密的有效手段。熵值大，意味着字节序列有可能是加密的或是压缩过的。熵值小，则正好相反。</p>
+</blockquote>
+<p>上图熵值恒定在 1，即意味着加密。</p>
+<p>看看 release note：</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/release_note.png" class="">
+
+<p>在升级到当前版本之前会有个中间版本，v303WWb04_middle 。</p>
+<p>D-Link搭建了一个ftp服务器供用户下载资源：<a target="_blank" rel="noopener" href="https://support.dlink.com/resource/products/">support.dlink.com - &#x2F;resource&#x2F;products&#x2F;</a></p>
+<p>在这里可以下载官网搜索不到的中间版本。</p>
+<p>说不定里面就包含解密程序。下下来之后用 binwalk 进行解压，得到 中间版本的文件系统，在里面寻找更新固件的程序。</p>
+<p>通过 grep 寻找文件系统中的敏感字符串：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">genia@ubuntu:~/Desktop/firmware/D-Link DIR-822-US 3.15B02/_DIR822C1_FW303WWb04_i4sa_middle.bin.extracted$ grep -rE &quot;update|firmware|upgrade|download&quot; &#x27;/home/genia/Desktop/firmware/D-Link DIR-822-US 3.15B02/_DIR822C1_FW303WWb04_i4sa_middle.bin.extracted/squashfs-root&#x27;</span><br></pre></td></tr></table></figure>
+
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/%E6%9F%A5%E6%89%BE%E6%9B%B4%E6%96%B0%E4%BF%A1%E6%81%AF.png" class="">
+
+<p>查找到一些固件更新下载的有效信息集中在  &#x2F;etc&#x2F;templates&#x2F;hnap&#x2F; 目录下。其中有个 php 文件名字叫做 StartFirmwareDownload。</p>
+<p>这是少见的在文件名中就含有 download 的。估计执行的就是下载固件的操作。审计一下代码，不会php，所幸有注释。</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/php%E8%A7%A3%E5%AF%86%E6%96%87%E4%BB%B6.png" class="">
+
+<p>fw encing ——&gt; firmware encrypt image ？</p>
+<p>丢给万能的 gpt：</p>
+<ol>
+<li><code>setattr(&quot;/runtime/tmpdevdata/image_sign&quot;, &quot;get&quot;, &quot;cat /etc/config/image_sign&quot;);</code>：这是一条命令，用于设置文件或资源的属性。它在 <code>/runtime/tmpdevdata/image_sign</code> 上执行了一个 <code>get</code> 操作，即读取 <code>/etc/config/image_sign</code> 文件的内容，并将结果存储在 <code>/runtime/tmpdevdata/image_sign</code> 中。</li>
+<li><code>$image_sign = query(&quot;/runtime/tmpdevdata/image_sign&quot;);</code>：这行代码用于查询 <code>/runtime/tmpdevdata/image_sign</code> 文件的内容，并将结果存储在 <code>$image_sign</code> 变量中。</li>
+<li><code>fwrite(&quot;a&quot;, $ShellPath, &quot;encimg -d -i &quot;.$fw_path.&quot; -s &quot;.$image_sign.&quot; &gt; /dev/console \n&quot;);</code>：这行代码使用 <code>fwrite</code> 函数（或类似的函数）将一条命令写入某个文件，文件路径由 <code>$ShellPath</code> 变量表示。这条命令是 <code>encimg -d -i [fw_path] -s [image_sign] &gt; /dev/console</code>，其中 <code>[fw_path]</code> 和 <code>[image_sign]</code> 是变量值。这个命令似乎是用来执行某种加密操作。</li>
+<li><code>del(&quot;/runtime/tmpdevdata&quot;);</code>：这行代码用于删除目录 <code>/runtime/tmpdevdata</code> 及其内容。这可能是清理或释放临时文件的一部分。</li>
+</ol>
+<p>可以查看 image_sign 的内容：</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/image_sign.png" class="">
+
+<p>wrgac43s_dlink.2015_dir822c1 即  <code>encimg -d -i [fw_path] -s [image_sign] &gt; /dev/console</code> 的一个参数，如果我们能获取到 encimg 文件并运行它，即可完成固件的解密。</p>
+<p>依旧使用 grep：</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/%E6%9F%A5%E6%89%BE%E8%A7%A3%E5%AF%86%E6%96%87%E4%BB%B6.png" class="">
+
+<p>路径一目了然：squashfs-root&#x2F;usr&#x2F;sbin&#x2F;encimg</p>
+<p>用qemu 对 encimg 进行模拟运行需要知道它的架构：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">genia@ubuntu:~/Desktop/firmware/D-Link DIR-822-US 3.15B02/_DIR822C1_FW303WWb04_i4sa_middle.bin.extracted/squashfs-root$ readelf -h &#x27;/home/genia/Desktop/firmware/D-Link DIR-822-US 3.15B02/_DIR822C1_FW303WWb04_i4sa_middle.bin.extracted/squashfs-root/encimg&#x27; </span><br><span class="line">ELF Header:</span><br><span class="line">  Magic:   7f 45 4c 46 01 02 01 00 00 00 00 00 00 00 00 00 </span><br><span class="line">  Class:                             ELF32</span><br><span class="line">  Data:                              2&#x27;s complement, big endian</span><br><span class="line">  Version:                           1 (current)</span><br><span class="line">  OS/ABI:                            UNIX - System V</span><br><span class="line">  ABI Version:                       0</span><br><span class="line">  Type:                              EXEC (Executable file)</span><br><span class="line">  Machine:                           MIPS R3000</span><br><span class="line">  Version:                           0x1</span><br><span class="line">  Entry point address:               0x4009b0</span><br><span class="line">  Start of program headers:          52 (bytes into file)</span><br><span class="line">  Start of section headers:          7524 (bytes into file)</span><br><span class="line">  Flags:                             0x1007, noreorder, pic, cpic, o32, mips1</span><br><span class="line">  Size of this header:               52 (bytes)</span><br><span class="line">  Size of program headers:           32 (bytes)</span><br><span class="line">  Number of program headers:         8</span><br><span class="line">  Size of section headers:           40 (bytes)</span><br><span class="line">  Number of section headers:         30</span><br><span class="line">  Section header string table index: 27</span><br></pre></td></tr></table></figure>
+
+<p>可见该文件是大端格式的 MIPS 架构。</p>
+<p>使用 QEMU 对其进行模拟（用户模式）。</p>
+<p>会输出一些提示让你添加对应参数：</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/%E5%8F%82%E6%95%B0%E6%8F%90%E7%A4%BA.png" class="">
+
+<p>结合前面的 php 代码，fw_path 即待解密的固件路径，image_sign 即我们从文件中得到的 wrgac43s_dlink.2015_dir822c1。</p>
+<p>重新执行命令:</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/%E8%A7%A3%E5%AF%86%E6%88%90%E5%8A%9F.png" class="">
+
+<p>再次用 binwalk 扫一扫这个固件并查看熵值：</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/%E8%A7%A3%E5%AF%86%E5%90%8E.png" class="">
+
+<p>解密成功。</p>
+<p>这种方法使用的前提是固件更新前曾发布过中间版本没有被加密，且中间版本可供下载。目前我知道的只有 D-Link 提供的 FTP 服务器可以下载到其产品的中间版本固件。可以关注一下官网的固件更新通告。</p>
+<h3 id="固件漏洞复现"><a href="#固件漏洞复现" class="headerlink" title="固件漏洞复现"></a>固件漏洞复现</h3><h4 id="TP-Link-Smart-Home-Router-远程代码执行漏洞"><a href="#TP-Link-Smart-Home-Router-远程代码执行漏洞" class="headerlink" title="TP-Link Smart Home Router 远程代码执行漏洞"></a>TP-Link Smart Home Router 远程代码执行漏洞</h4><p>TTDP 是 TP-Link 公司的一个专有协议。运行在 UDP 的1040 端口上。该协议的 v1 版本有一个远程代码执行漏洞。用户可以利用该漏洞在该路由器上以 root 权限执行任意命令。</p>
+<p>用 binwalk 解压固件后，查找 TDDP 相关程序：</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/ttdp%E6%9F%A5%E6%89%BE.png" class="">
+
+<p>上 IDA，还是 ARM 架构的，通过检索 tddp 字符串找到 tddp 程序入口（函数 sub_936C）：</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/%E8%A7%A3%E5%8C%85%E6%93%8D%E4%BD%9C.png" class="">
+
+<p>安装 tunctl 工具，使得 QEMU虚拟机 和 物理机之间可以实现通信。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install uml-utilities</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后配置虚拟网卡：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">genia@ubuntu:~/Desktop/firmware/TP-Link SR20/_tpra_sr20v1_us-up-ver1-2-1-P522_20180518-rel77140_2018-05-21_08.42.04.bin.extracted/squashfs-root$ sudo tunctl -b -t tap0</span><br><span class="line">tap0</span><br><span class="line">genia@ubuntu:~/Desktop/firmware/TP-Link SR20/_tpra_sr20v1_us-up-ver1-2-1-P522_20180518-rel77140_2018-05-21_08.42.04.bin.extracted/squashfs-root$ sudo ifconfig tap0 10.10.10.1/24</span><br><span class="line">genia@ubuntu:~/Desktop/firmware/TP-Link SR20/_tpra_sr20v1_us-up-ver1-2-1-P522_20180518-rel77140_2018-05-21_08.42.04.bin.extracted/squashfs-root$ ifconfig tap0</span><br><span class="line">tap0: flags=4099&lt;UP,BROADCAST,MULTICAST&gt;  mtu 1500</span><br><span class="line">        inet 10.10.10.1  netmask 255.255.255.0  broadcast 10.10.10.255</span><br><span class="line">        ether ee:df:a6:72:52:7d  txqueuelen 1000  (Ethernet)</span><br><span class="line">        RX packets 0  bytes 0 (0.0 B)</span><br><span class="line">        RX errors 0  dropped 0  overruns 0  frame 0</span><br><span class="line">        TX packets 0  bytes 0 (0.0 B)</span><br><span class="line">        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="D-Link-DIR-815"><a href="#D-Link-DIR-815" class="headerlink" title="D-Link DIR-815"></a>D-Link DIR-815</h4><p>该型号的固件在 D-Link ftp和官网都已经找不到了。这里用的是 winmt 师傅提供的附件。</p>
+<p>这个型号的路由器既存在后门漏洞，也存在栈溢出漏洞。因为都找得到资料，可以一一复现一下。</p>
+<h5 id="后门漏洞"><a href="#后门漏洞" class="headerlink" title="后门漏洞"></a>后门漏洞</h5><p>攻击者通过该漏洞获取 Telnet 服务的账号和密码，并借此任意登录该型号路由器的 Telent 服务，执行任意系统指令。</p>
+<p>依旧先使用 binwalk 进行解压，得到文件系统后用 firmwalker 扫一遍，输出了很多 sh 脚本目录，中间有一个：</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/telent.png" class="">
+
+<p>对它进行进一步分析：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/sh</span></span><br><span class="line">echo [$0]: $1 ... &gt; /dev/console</span><br><span class="line">if [ &quot;$1&quot; = &quot;start&quot; ]; then</span><br><span class="line">	if [ -f &quot;/usr/sbin/login&quot; ]; then</span><br><span class="line">		image_sign=`cat /etc/config/image_sign`</span><br><span class="line">		telnetd -l /usr/sbin/login -u Alphanetworks:$image_sign -i br0 &amp;</span><br><span class="line">	else</span><br><span class="line">		telnetd &amp;</span><br><span class="line">	fi</span><br><span class="line">else</span><br><span class="line">	killall telnetd</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+
+<p>大致猜测一下，与 telnet 登录（login）有关，其中一个重要信息存储在了 &#x2F;etc&#x2F;config&#x2F;image_sign 中，很可能就是 Alphanetworks 账户的密码。</p>
+<p>找到  &#x2F;etc&#x2F;config&#x2F;image_sign：wrgnd08_dlob_dir815ss</p>
+<p>下面直接用 FirmAE 进行模拟：</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/dir-815%E6%A8%A1%E6%8B%9F%E6%88%90%E5%8A%9F.png" class="">
+
+<p>模拟成功后先扫一扫目标地址的端口：</p>
+<img src="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/nmap%E6%89%AB%E6%8F%8F%E7%AB%AF%E5%8F%A3.png" class="">
+
+<p>telnet 默认处于开启状态。</p>
+<p>接着利用获得的账号和密码尝试进行 telnet 登录并成功 get shell：</p>
+
+
+<h5 id="栈溢出漏洞"><a href="#栈溢出漏洞" class="headerlink" title="栈溢出漏洞"></a>栈溢出漏洞</h5><p>参考自 winmt 师傅的文章：<a target="_blank" rel="noopener" href="https://bbs.kanxue.com/thread-272318.htm">https://bbs.kanxue.com/thread-272318.htm</a></p>
+<p>这次使用 ubuntu 20.04 进行复现。不知道为什么，编译 binwalk 配套工具 sasquatch 的时候总是报错，网上也找不到解决办法。服了。</p>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#iot安全" >
+    <span class="tag-code">iot安全</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2023/12/08/MIPS-%E5%AD%A6%E4%B9%A0/">
+        <span class="nav-arrow">← </span>
+        
+          MIPS 学习
+        
+      </a>
+    
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+    <!-- 二维码 END -->
+    
+      <!-- Utterances START -->
+      <div id="utterances"></div>
+      <script src="https://utteranc.es/client.js"
+        repo=""
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async></script>    
+      <!-- Utterances END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%BA%E4%BB%B6%E6%98%AF%E4%BB%80%E4%B9%88%E4%B8%9C%E8%A5%BF%EF%BC%9F"><span class="toc-nav-text">固件是什么东西？</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%BA%E4%BB%B6%E8%8E%B7%E5%8F%96%E5%8A%9E%E6%B3%95"><span class="toc-nav-text">固件获取办法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%8E%E5%AE%98%E7%BD%91%E8%8E%B7%E5%8F%96"><span class="toc-nav-text">从官网获取</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%80%9A%E8%BF%87%E6%B5%81%E9%87%8F%E6%8B%A6%E6%88%AA%E8%8E%B7%E5%8F%96"><span class="toc-nav-text">通过流量拦截获取</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E7%BC%96%E7%A8%8B%E5%99%A8%E4%BB%8E%E9%97%AA%E5%AD%98%E4%B8%AD%E8%AF%BB%E5%8F%96"><span class="toc-nav-text">使用编程器从闪存中读取</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%80%9A%E8%BF%87%E4%B8%B2%E5%8F%A3%E8%B0%83%E8%AF%95%E6%8F%90%E5%8F%96%E5%9B%BA%E4%BB%B6"><span class="toc-nav-text">通过串口调试提取固件</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%BA%E4%BB%B6%E5%88%86%E6%9E%90"><span class="toc-nav-text">固件分析</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B7%A5%E5%85%B7"><span class="toc-nav-text">工具</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#binwalk"><span class="toc-nav-text">binwalk</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="toc-nav-text">文件系统</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#SquashFS"><span class="toc-nav-text">SquashFS</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#JFFS2"><span class="toc-nav-text">JFFS2</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#YAFFS2"><span class="toc-nav-text">YAFFS2</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#UBIFS"><span class="toc-nav-text">UBIFS</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#CramFS"><span class="toc-nav-text">CramFS</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8F%90%E5%8F%96%E5%9B%BA%E4%BB%B6%E4%B8%AD%E7%9A%84%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="toc-nav-text">提取固件中的文件系统</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%87%AA%E5%B8%A6%E5%91%BD%E4%BB%A4%E6%8F%90%E5%8F%96"><span class="toc-nav-text">使用系统自带命令提取</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E5%B7%A5%E5%85%B7%E6%8F%90%E5%8F%96"><span class="toc-nav-text">使用工具提取</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%86%E6%9E%90%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="toc-nav-text">分析文件系统</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#firmwalker"><span class="toc-nav-text">firmwalker</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#trommel"><span class="toc-nav-text">trommel</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#emba"><span class="toc-nav-text">emba</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#FACT"><span class="toc-nav-text">FACT</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9B%BA%E4%BB%B6%E6%A8%A1%E6%8B%9F"><span class="toc-nav-text">固件模拟</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#QEMU"><span class="toc-nav-text">QEMU</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Firmware-Analysis-Toolkit"><span class="toc-nav-text">Firmware Analysis Toolkit</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#FrimAE"><span class="toc-nav-text">FrimAE</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9B%BA%E4%BB%B6%E5%8A%A0%E5%AF%86%E6%96%B9%E5%BC%8F"><span class="toc-nav-text">固件加密方式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%83%85%E5%86%B5-1"><span class="toc-nav-text">情况 1</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%83%85%E5%86%B5-2"><span class="toc-nav-text">情况 2</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%83%85%E5%86%B5-3"><span class="toc-nav-text">情况 3</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%B8%80%E4%B8%AA%E8%A7%A3%E5%AF%86%E5%AE%9E%E4%BE%8B"><span class="toc-nav-text">一个解密实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9B%BA%E4%BB%B6%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0"><span class="toc-nav-text">固件漏洞复现</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#TP-Link-Smart-Home-Router-%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E"><span class="toc-nav-text">TP-Link Smart Home Router 远程代码执行漏洞</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#D-Link-DIR-815"><span class="toc-nav-text">D-Link DIR-815</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%90%8E%E9%97%A8%E6%BC%8F%E6%B4%9E"><span class="toc-nav-text">后门漏洞</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E6%A0%88%E6%BA%A2%E5%87%BA%E6%BC%8F%E6%B4%9E"><span class="toc-nav-text">栈溢出漏洞</span></a></li></ol></li></ol></li></ol></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://example.com/2023/12/08/固件基础/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', '/css/images/error_icon.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== '/css/images/error_icon.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
+
+
+
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2023 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
+    
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      hljs.configure({useBR: true});
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+
+<script src="/js/script.js"></script>
+
+
+  </body>
+</html>

