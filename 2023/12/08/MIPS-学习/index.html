@@ -201,65 +201,65 @@
 <h4 id="32-个通用寄存器"><a href="#32-个通用寄存器" class="headerlink" title="32 个通用寄存器"></a>32 个通用寄存器</h4><table>
 <thead>
 <tr>
-<th align="left">寄存器编号</th>
-<th align="left">别名</th>
-<th align="left">用途</th>
+<th align="left"><strong>寄存器编号</strong></th>
+<th align="left"><strong>别名</strong></th>
+<th align="left"><strong>用途</strong></th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">$0</td>
-<td align="left">$zero</td>
-<td align="left">常量0(constant value 0)</td>
+<td align="left"><code>$0</code></td>
+<td align="left"><code>$zero</code></td>
+<td align="left"><code>常量0(constant value 0)</code></td>
 </tr>
 <tr>
-<td align="left">$1</td>
-<td align="left">$at</td>
-<td align="left">保留给汇编器(Reserved for assembler)</td>
+<td align="left"><code>$1</code></td>
+<td align="left"><code>$at</code></td>
+<td align="left"><code>保留给汇编器(Reserved for assembler)</code></td>
 </tr>
 <tr>
-<td align="left">$2-$3</td>
-<td align="left">$v0-$v1</td>
-<td align="left">函数调用返回值(values for results and expression evaluation)</td>
+<td align="left"><code>$2-$3</code></td>
+<td align="left"><code>$v0-$v1</code></td>
+<td align="left"><code>函数调用返回值(values for results and expression evaluation)</code></td>
 </tr>
 <tr>
-<td align="left">$4-$7</td>
-<td align="left">$a0-$a3</td>
-<td align="left">函数调用参数(arguments)</td>
+<td align="left"><code>$4-$7</code></td>
+<td align="left"><code>$a0-$a3</code></td>
+<td align="left"><code>函数调用参数(arguments)</code></td>
 </tr>
 <tr>
-<td align="left">$8-$15</td>
-<td align="left">$t0-$t7</td>
-<td align="left">暂时的(或随便用的)</td>
+<td align="left"><code>$8-$15</code></td>
+<td align="left"><code>$t0-$t7</code></td>
+<td align="left"><code>暂时的(或随便用的)</code></td>
 </tr>
 <tr>
-<td align="left">$16-$23</td>
-<td align="left">$s0-$s7</td>
-<td align="left">保存的(或如果用，需要SAVE&#x2F;RESTORE的)(saved)</td>
+<td align="left"><code>$16-$23</code></td>
+<td align="left"><code>$s0-$s7</code></td>
+<td align="left"><code>保存的(或如果用，需要SAVE/RESTORE的)(saved)</code></td>
 </tr>
 <tr>
-<td align="left">$24-$25</td>
-<td align="left">$t8-$t9</td>
-<td align="left">暂时的(或随便用的)</td>
+<td align="left"><code>$24-$25</code></td>
+<td align="left"><code>$t8-$t9</code></td>
+<td align="left"><code>暂时的(或随便用的)</code></td>
 </tr>
 <tr>
-<td align="left">$28</td>
-<td align="left">$gp</td>
-<td align="left">全局指针(Global Pointer)</td>
+<td align="left"><code>$28</code></td>
+<td align="left"><code>$gp</code></td>
+<td align="left"><code>全局指针(Global Pointer)</code></td>
 </tr>
 <tr>
-<td align="left">$29</td>
-<td align="left">$sp</td>
-<td align="left">堆栈指针(Stack Pointer)</td>
+<td align="left"><code>$29</code></td>
+<td align="left"><code>$sp</code></td>
+<td align="left"><code>堆栈指针(Stack Pointer)</code></td>
 </tr>
 <tr>
-<td align="left">$30</td>
-<td align="left">$fp</td>
-<td align="left">帧指针(Frame Pointer)</td>
+<td align="left"><code>$30</code></td>
+<td align="left"><code>$fp</code></td>
+<td align="left"><code>帧指针(Frame Pointer)</code></td>
 </tr>
 <tr>
-<td align="left">$31</td>
-<td align="left">$ra</td>
-<td align="left">返回地址(return address)</td>
+<td align="left"><code>$31</code></td>
+<td align="left"><code>$ra</code></td>
+<td align="left"><code>返回地址(return address)</code></td>
 </tr>
 </tbody></table>
 <h4 id="两个整数乘法寄存器"><a href="#两个整数乘法寄存器" class="headerlink" title="两个整数乘法寄存器"></a>两个整数乘法寄存器</h4><p>HI 和 LO 寄存器。</p>
@@ -278,20 +278,20 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>$f0,$f2</td>
-<td>用作函数返回值</td>
+<td><code>$f0,$f2</code></td>
+<td><code>用作函数返回值</code></td>
 </tr>
 <tr>
-<td>$f12−$f19</td>
-<td>用作传递参数</td>
+<td><code>$f12−$f19</code></td>
+<td><code>用作传递参数</code></td>
 </tr>
 <tr>
-<td>$f24−$f31</td>
-<td>寄存器变量，发生函数调用时要保存</td>
+<td><code>$f24−$f31</code></td>
+<td><code>寄存器变量，发生函数调用时要保存</code></td>
 </tr>
 <tr>
-<td>$f1、$f3−$f11 、$f20−$f23</td>
-<td>用作临时变量</td>
+<td><code>$f1、$f3−$f11 、$f20−$f23</code></td>
+<td><code>用作临时变量</code></td>
 </tr>
 </tbody></table>
 <p>功能的分配基本上和通用寄存器相同。比如一个函数返回值为整数或指针时，使用通用寄存器的v0，返回值为浮点类型时，就使用浮点寄存器 f0。函数调用时的参数是整型就用通用寄存器 a0-a7 传递，如果是浮点类型就用 f12−f19 传递。对于函数返回地址、栈指针等还是使用通用寄存器的ra、sp。</p>
