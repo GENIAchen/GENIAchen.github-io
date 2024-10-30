@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="When there is a will, there is a way.">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      nju-os M1 | GENIA
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+  
+  
+    
+<script src="/js/local-search.js"></script>
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>GENIA</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+      
+        <li class="menu-item menu-item-search right-list">
+    <a role="button" class="popup-trigger">
+        <i class="fa fa-search fa-fw"></i>
+    </a>
+</li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+    
+      <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+            <span class="search-icon">
+                <i class="fa fa-search"></i>
+            </span>
+            <div class="search-input-container">
+                <input autocomplete="off" autocapitalize="off"
+                    placeholder="Please enter your keyword(s) to search." spellcheck="false"
+                    type="search" class="search-input">
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa fa-times-circle"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+    
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>nju-os M1</h2>
+  <p class="post-date">2024-10-30</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><p>要求：<a target="_blank" rel="noopener" href="https://jyywiki.cn/OS/2022/labs/M1.html">M1: 打印进程树 (pstree) (jyywiki.cn)</a></p>
+<p>用时：4h  而且只做了一部分</p>
+<p>不能放源码，所以只讲讲思路，总结一下做的时候碰到的问题。</p>
+<h2 id="01-x2F-proc"><a href="#01-x2F-proc" class="headerlink" title="01 &#x2F;proc"></a>01 &#x2F;proc</h2><p>要建树，首先需要素材，需要知道当前运行的所有进程的基本信息，包括该进程的 PID、NAME 以及它的父进程。</p>
+<p>linux 本身有许多可以查看进程信息的命令行工具，譬如 ps，它们本身也要通过操作系统获得自己要输出的信息，可以通过阅读它们的源码看看它们是怎么获取进程信息的。</p>
+<p>老师的实验指南中告诉我们 &#x2F;proc 目录是一切的关键：</p>
+<img src="/2024/10/30/nju-os-M1/image-20241030192505000.png" class="">
+
+<p>会发现该目录下有许多临时目录，而这些临时目录的名称就对应着当前的进程号。</p>
+<img src="/2024/10/30/nju-os-M1/image-20241030192657217.png" class="">
+
+<p>不难发现临时目录下的 status 文件包含了我们需要的信息：</p>
+<img src="/2024/10/30/nju-os-M1/image-20241030192915275.png" class="">
+
+<p>那就简单了，只要把 NAME-PID-PPID 一一对应地收集起来就好了。</p>
+<p>因为我编程基础很薄弱，实在想不到什么聪明办法，就只能很暴力地去做这件事。</p>
+<p>我选择把 &#x2F;proc 目录下的目录名称用正则表达式滤一遍，留下目录名为数字的，放到一个叫dir 的数组里。再遍历这个数组，一个一个读取 &#x2F;proc&#x2F;%s&#x2F;status 里的内容，把 NAME 和 PPID 读出来，放到 name_dirs 和 p_dirs 里面。</p>
+<p>正则表达式和文件 I&#x2F;O 这里花了我一些时间。值得庆幸的是 status 内容的读取不需要 root 权限。</p>
+<h2 id="02-建树与打印"><a href="#02-建树与打印" class="headerlink" title="02 建树与打印"></a>02 建树与打印</h2><h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><p>我依旧选择很笨的方法，直接构建单向多叉树：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span>&#123;</span></span><br><span class="line">    <span class="type">char</span> *p_name;</span><br><span class="line">    <span class="type">char</span> *pid;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> **<span class="title">child</span>;</span></span><br><span class="line">    <span class="type">int</span> child_count;</span><br><span class="line">&#125;TreeNode;</span><br></pre></td></tr></table></figure>
+
+<p>除了为每个节点维护一个 child 指针数组，我想不到什么更好的方法（</p>
+<p>遵循数据结构课的经验，还是设计四个函数用于建树、free和 print：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">TreeNode* <span class="title function_">createNode</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *str1, <span class="type">const</span> <span class="type">char</span> *str2)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">addChild</span><span class="params">(TreeNode *parent, TreeNode *child)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">build_the_tree</span><span class="params">(TreeNode *root,<span class="type">int</span> count,<span class="type">char</span> *dirs[],<span class="type">char</span> *name_dirs[],<span class="type">char</span> *p_dirs[])</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">freeTree</span><span class="params">(TreeNode *root)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">printTree</span><span class="params">(TreeNode *node, <span class="type">int</span> is_last, <span class="type">const</span> <span class="type">char</span> *prefix)</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="createNode"><a href="#createNode" class="headerlink" title="createNode"></a>createNode</h3><p>为新节点分配内存，用 strdup 函数将参数指向的字符串内容复制到新的地址空间。</p>
+<p>节点其它内容也进行初始化。</p>
+<h3 id="addChild"><a href="#addChild" class="headerlink" title="addChild"></a>addChild</h3><p>用 realloc 为 child 指针数组重新分配内存，增加一个 <code>sizeof(TreeNode *)</code> 。</p>
+<p>把指向孩子节点的指针添加进去。</p>
+<h3 id="build-the-tree"><a href="#build-the-tree" class="headerlink" title="build_the_tree"></a>build_the_tree</h3><p>创建 TreeNode 节点数组 nodes，为每个进程创建一个节点并初始化，节点地址放在 nodes 中待用。</p>
+<p>遍历 nodes，孩子找爹。</p>
+<p>最后 free nodes 数组。</p>
+<h3 id="freeTree"><a href="#freeTree" class="headerlink" title="freeTree"></a>freeTree</h3><p>递归 free 即可，直到 root &#x3D;&#x3D; NULL。</p>
+<h3 id="printTree"><a href="#printTree" class="headerlink" title="printTree"></a>printTree</h3><p>我觉得这个是最难的。但本质还是一个递归输出。</p>
+<ol>
+<li><p>打印当前节点信息。</p>
+</li>
+<li><p>如果当前节是子节点，则直接返回。</p>
+</li>
+<li><p>如果是父节点，则遍历子节点并对子节点进行递归调用。</p>
+</li>
+</ol>
+<p>这是我做出来的最终效果：</p>
+<img src="/2024/10/30/nju-os-M1/image-20241030201729400.png" class="">
+
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><h3 id="根节点要正确初始化！"><a href="#根节点要正确初始化！" class="headerlink" title="根节点要正确初始化！"></a>根节点要正确初始化！</h3><p>因为一开始根节点忘记初始化或者没有完全初始化，导致一运行就 segmentation fault。</p>
+<p>具体的问题包括但不限于：</p>
+<ol>
+<li>一开始忘记给 root 分配内存，导致 build_the_tree 时完全找不到它的地址</li>
+<li>child_count 未初始化时在内存中的值很大，导致 printTree 函数判断出错，怎么都运行不完</li>
+<li>在 printf 时发生段错误，调试发现参数是一个不合法内存地址，因为 root-&gt; p_name 没赋值</li>
+<li>……………………</li>
+</ol>
+<p>在经历了几小时 gdb 爆调后，程序才算是跳出 segmentation fault 诅咒了。彻底明白自己的 C 指针和数据结构学得很烂了（</p>
+<h2 id="可移植性"><a href="#可移植性" class="headerlink" title="可移植性"></a>可移植性</h2><p>我试着用 gcc 编译了 32 位和 64 位两个版本，都可以正常运行。</p>
+<p>关于可移植性这块我没有做更深入的研究。</p>
+<h2 id="没实现的功能"><a href="#没实现的功能" class="headerlink" title="没实现的功能"></a>没实现的功能</h2><ol>
+<li><p>命令行的使用。我不知道怎么实现 通过命令行控制输出。pstree -n 和 -p 的输出差距还是很大的。我觉得太过复杂了。</p>
+</li>
+<li><p>得到进程号以后发现文件没了 (进程终止了) 的情况我没考虑。</p>
+</li>
+<li><p>pstree -n 会把同级的同名进程合并在一起，这个功能我自己实现不了。</p>
+<img src="/2024/10/30/nju-os-M1/image-20241030204346950.png" class="">
+</li>
+<li><p>……</p>
+</li>
+</ol>
+<p>希望在后续的学习中能进一步完善代码。</p>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#操作系统" >
+    <span class="tag-code">操作系统</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2023/12/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%9B%BE-%E6%A8%A1%E6%9D%BF%E4%BB%A3%E7%A0%81/">
+        <span class="nav-arrow">← </span>
+        
+          数据结构-图-模板代码
+        
+      </a>
+    
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+    <!-- 二维码 END -->
+    
+      <!-- Utterances START -->
+      <div id="utterances"></div>
+      <script src="https://utteranc.es/client.js"
+        repo=""
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async></script>    
+      <!-- Utterances END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#01-x2F-proc"><span class="toc-nav-text">01 &#x2F;proc</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#02-%E5%BB%BA%E6%A0%91%E4%B8%8E%E6%89%93%E5%8D%B0"><span class="toc-nav-text">02 建树与打印</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-nav-text">数据结构</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#createNode"><span class="toc-nav-text">createNode</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#addChild"><span class="toc-nav-text">addChild</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#build-the-tree"><span class="toc-nav-text">build_the_tree</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#freeTree"><span class="toc-nav-text">freeTree</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#printTree"><span class="toc-nav-text">printTree</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-nav-text">遇到的问题</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%A0%B9%E8%8A%82%E7%82%B9%E8%A6%81%E6%AD%A3%E7%A1%AE%E5%88%9D%E5%A7%8B%E5%8C%96%EF%BC%81"><span class="toc-nav-text">根节点要正确初始化！</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8F%AF%E7%A7%BB%E6%A4%8D%E6%80%A7"><span class="toc-nav-text">可移植性</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%B2%A1%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-nav-text">没实现的功能</span></a></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://example.com/2024/10/30/nju-os-M1/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', '/css/images/error_icon.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== '/css/images/error_icon.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
+
+
+
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2024 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
+    
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      hljs.configure({useBR: true});
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+
+<script src="/js/script.js"></script>
+
+
+  </body>
+</html>
